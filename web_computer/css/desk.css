@@ -1,0 +1,452 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	margin: 0;
+	background: url(../img/bg/blue_glow.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #ccc;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*=============左侧功能栏left_bar====================*/
+.left_bar{
+	width: 73px;
+	height: 576px;
+	background: url(../img/dock_l.png) no-repeat;
+	position: fixed;
+	left: 0;
+	top: 50%;
+	margin-top: -290px;
+	z-index: 300;
+}
+.left_nav li{
+	width: 58px;
+	/*height: 58px;*/
+	margin: 10px 4px;
+	text-align: center;
+}
+.left_nav li img{
+	margin-top: 4px;
+	width: 48px;
+	cursor: pointer;
+}
+.left_nav li div{
+	margin-top: 4px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+.left_nav li:hover{
+	background: url(../img/appbutton_mouseover_bg4.png) no-repeat;
+}
+/*设置功能*/
+.set_list{
+	height: 115px;
+	width: 100%;
+	/*background: #000;*/
+	position: absolute;
+	bottom: 5px;
+}
+.set_list .setItem{
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	background: url(../img/portal_all_png.png) no-repeat;
+}
+.pin_sound .pinyin{
+	background-position: -80px 0;
+}
+.pin_sound .sound{
+	background-position: 0 0;
+}
+/*声音关闭class*/
+.pin_sound .sound.sound_close{
+	background-position: -20px 0;
+}
+.set_style .set{
+	background-position: -60px 0;
+}
+.set_style .style{
+	background-position: -40px 0;
+}
+/*开始按钮*/
+.begin{
+	position: relative;
+}
+.begin .window{
+	width: 40px;
+	height: 40px;
+	margin: 5px 10px;
+	background-position: -100px 0;
+}
+.begin .win_box{
+	position: absolute;
+	left: 72.5px;
+	top: -125px;
+	width: 181px;
+	height: 242px;
+	background: url(../img/startmenu.png) no-repeat -33px -69px;
+	z-index: 200;
+	border-radius: 5px;
+	color: #fff;
+	display: none;
+}
+.win_box .sign{
+	height: 30px;
+	line-height: 30px;
+    padding: 5px 0 4px 5px;
+}
+.lock_back a{
+	float: left;
+	width: 24px;
+	height: 24px;
+	background: url(../img/startmenu.png) no-repeat;
+}
+.lock_back .back{
+	background-position: -165px -355px;
+}
+.lock_back .back:hover{
+	background-position: -216px -355px;
+}
+.lock_back .lock{
+	margin:0 4px;
+	background-position: -190px -355px;
+}
+.lock_back .lock:hover{
+	background-position: -241px -355px;
+}
+
+.win_func li{
+	height: 30px;
+	padding-left:15px;
+	line-height: 32px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+.win_func li:hover{
+	background: url(../img/startmenu.png) no-repeat -264px -153px ;
+}
+.win_func li.logout{
+	width: 35px;
+	height: 35px;
+	background: url(../img/startmenu.png) no-repeat -60px -355px;
+	margin: auto;
+	padding: 0;
+}
+.win_func li.logout:hover{
+	background-position: -23px -355px;
+}
+
+.begin .win_box.win_hide{
+	display: block;
+}
+.pin_sound .pinyin:hover{
+	background-position: -80px -20px;
+}
+.pin_sound .sound.sound_close:hover{
+	background-position: -20px -20px;
+}
+.pin_sound .sound:hover{
+	background-position: 0 -20px;
+}
+.set_style .set:hover{
+	background-position: -60px -20px;
+}
+.set_style .style:hover{
+	background-position: -40px -20px;
+}
+.begin .window:hover{
+	background-position: -140px 0;
+}
+
+/*================顶部导航栏top_nav=====================*/
+.top_nav{
+	width: 100%;
+	height: 50px;
+	/*background: red;*/
+	position: relative;
+	text-align: center;
+}
+/*.menu_box{
+	height: 100%;
+	position: absolute;
+	background-image: url(../img/dock_up_c.png);
+	left: 50%;
+}*/
+.menu_item{
+	display: inline-block;
+	width: 40px;
+	text-align: center;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 5px 0px 0px;
+	color: #000;
+	vertical-align: top;
+}
+.menu_item img{
+	width: 100%;
+}
+.menu_item span{
+	display: none;
+}
+.menu_item:hover span{
+	display: block;
+}
+
+/*======================app list==========================*/
+
+.desk{
+	width: calc(100% - 80px);
+	height: calc(100% - 60px);
+	/*background: yellow;*/
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.appList{
+	/*background: blue;*/
+	height: 100%;
+}
+.appList li{
+	width: 88px;
+	height: 88px;
+	text-align: center;
+	position: absolute;
+	font-size: 12px;
+	color: #fff;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.appList li.click{
+	transition: none;
+	z-index: 100;
+}
+.appItem img{
+	margin-top: 6px;
+	width: 48px;
+}
+.appItem span{
+	display: inline-block;
+	height: 20px;
+	min-width: 50px;
+	background-color: rgba(100,100,100,.4);
+	border-radius: 10px;
+	line-height: 20px;
+	padding: 0 9px;
+	margin-top: 5px;
+}
+.appItem:hover{
+	background: url(../img/appbutton_mouseover_bg3.png) no-repeat ;
+}
+/*大图标*/
+.appList li.big_icon{	
+	width: 100px;
+	height: 100px;
+	background-size: 100% 100%;
+}
+.appList li.big_icon img{
+	width: 60px;
+	height: 60px;
+	margin-top: 2px;
+}
+.appList li.big_icon span{
+	min-width: 55px;
+	margin-top: 0;
+}
+
+/*===============底部功能栏====================*/
+.footMune{
+	width: 100%;
+	height: 64px;
+	background: url(../img/bg_task_b.png) repeat-x 0 41px transparent;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.thumbList{
+	height: 100%;
+	/*width: 500px;*/
+	/*background: red;*/
+	position: absolute;
+	bottom: 0;
+	left: 75px;
+}
+.thumbItem{
+	height: 100%;
+	width: 112px;
+	float: left;
+	background: url(../img/bg_task_nor.png) no-repeat;
+	cursor: pointer;
+}
+.thumbItem img,.thumbItem span{
+	float: left;
+}
+.thumbItem img{
+	width: 32px;
+	height: 32px;
+	margin: 22px 5px 0 5px;
+}
+.thumbItem span{
+	color: #fff;
+	line-height: 22px;
+	margin-top: 32px;
+}
+.thumbItem.selected{
+	background-image: url(../img/bg_task_cur.png);
+}
+.thumbItem:hover{
+	background-image: url(../img/bg_task_over.png);
+}
+/*================右键菜单============*/
+.context_menu{
+	width: 230px;
+	height: 280px;
+	background: bisque;
+	position: absolute;
+	left: 500px;
+	top: 200px;
+	box-shadow: 2px 2px 5px 2px rgba(0,0,0,.3);
+	border: 1px solid #919292;
+	display: none;
+	z-index: 99999;
+}
+.menu_list li{
+	height:35px;
+	line-height: 35px;
+    background: #f1f2f2;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    padding: 0 20px;
+    color: #3a3a3a;
+    box-sizing: border-box;
+}
+.menu_list .menu2{
+	width: 100px;
+	position: absolute;
+	right: -102px;
+	top: -1px;
+	border: 1px solid #919292;
+	text-align: center;
+	display: none;
+}
+
+.menu_list li:hover{
+	background-color: #dadadb;
+	position: relative;
+}
+.menu_list li:hover .menu2{
+	display: block;
+}
+.menu_list li .icon,.menu_list li .ic {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+	background: url(../img/sprits.png) no-repeat;
+    background-repeat: no-repeat;
+}
+.menu_list li .icon {
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+.menu_list li .arrow {
+    background-position: -520px -2px;
+    position: relative;
+    top: 5px;
+    float: right;
+}
+.menu_list li:nth-of-type(1) .icon {
+    background-position: -471px -2px;
+}
+.menu_list li:nth-of-type(2) .icon {
+    background-position: -438px -2px;
+}
+.menu_list li:nth-of-type(3) .icon {
+    background-position: -392px -3px;
+}
+.menu_list li:nth-of-type(4) .icon {
+    background-position: 0 0;
+}
+.menu_list li:nth-of-type(5) .icon {
+    background-position: -120px 0;
+}
+.menu_list li:nth-of-type(6) .icon {
+    background-position: -120px 0;
+}
+.menu_list li:nth-of-type(7) .icon {
+    background-position: -89px 0;
+}
+.menu_list li:nth-of-type(8) .icon {
+    background-position: -226px -5px;
+}
+
+/*主题设置*/
+.theme{
+	width: 100%;
+	height: 100%;
+	padding:20px 30px;
+	box-sizing: border-box;
+	background: rgba(220,250,250,.4);
+}
+.theme_head{
+	height: 28px;
+	border-bottom: 1px solid #a1b4b0;
+}
+.theme_head div{
+	height: 100%;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+	padding: 0 10px;
+	margin-left: 20px;
+	border: 1px solid #a1b4b0;
+	border-bottom: none;
+	font-size: 14px;
+	background: url(../img/tab_background.gif) repeat-x #fff;
+}
+.themeList li{
+	float: left;
+	width: 160px;
+	height: 140px;
+	margin: 5px 10px 0;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+}
+.themeList li:hover{
+	background: #cbe7fc;
+}
+.themeList li img{
+	display: inline-block;
+	border-radius: 4px;
+	margin-top: 5px;
+}
+.themeList li div{
+	text-align: center;
+	margin-top: 3px;
+}

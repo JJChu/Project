@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/desk.css"/>
+		<link rel="stylesheet" type="text/css" href="css/todo.css"/>
+		<link rel="stylesheet" type="text/css" href="css/popUp.css"/>
+	</head>
+	<body>
+		<!--左侧导航栏-->
+		<div class="left_bar">
+			<ul class="left_nav">
+				<li title="应用时尚" class="fashion">
+					<img src="ico/appmarket.png"/>
+					<!--<div>应用商店</div>-->
+				</li>
+				<li title="腾讯QQ" class="qq">
+					<img src="ico/big.png"/>
+				</li>
+				<li title="微博">
+					<img src="ico/weibo.png"/>
+				</li>
+				<li title="邮箱">
+					<img src="ico/mail.png"/>
+				</li>
+				<li title="浏览器">
+					<img src="ico/internet.png"/>
+				</li>
+				<li title="QQ空间">
+					<img src="ico/zone.png"/>
+				</li>
+			</ul>
+			<div class="set_list">
+				<div class="pin_sound">
+					<a class="setItem pinyin" title="输入法" href="javascript:void(0)"></a>
+					<a class="setItem sound" title="声音设置" href="javascript:void(0)"></a>
+				</div>
+				<div class="set_style">
+					<a class="setItem set" title="系统设置" href="javascript:void(0)"></a>
+					<a class="setItem style" title="主题设置" href="javascript:void(0)"></a>
+				</div>
+				<div class="begin">
+					<a class="setItem window" title="点击从这里开始" href="javascript:void(0)"></a>
+					<div class="win_box">
+						<div class="sign">
+							<div class="fl">请 <a href="#">登录</a></div>
+							<div class="fr lock_back">
+								<a href="#" title="反馈" class="back"></a>
+								<a href="#" title="锁定" class="lock"></a>
+							</div>
+						</div>
+						<ul class="win_func">
+							<li>添加到收藏夹</li>
+							<li>保存到桌面快捷方式</li>
+							<li>下载客户端</li>
+							<li>关于Q+ Web</li>
+							<li>新手指导</li>
+							<li class="logout" title="注销"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--顶部菜单栏-->
+		<div class="top_nav">
+			<!--<div class="menu_box">-->
+				<a class="menu_item" href="#">
+					<img src="img/home_thisMenu.png"/>
+					<span>主页</span>
+				</a>
+				<a class="menu_item" href="#">
+					<img src="img/home_thisMenu.png"/>
+					<span>主页</span>
+				</a>
+				<a class="menu_item" href="#">
+					<img src="img/home_thisMenu.png"/>
+					<span>主页</span>
+				</a>
+				<a class="menu_item" href="#">
+					<img src="img/home_thisMenu.png"/>
+					<span>主页</span>
+				</a>
+				<a class="menu_item" href="#">
+					<img src="img/home_thisMenu.png"/>
+					<span>主页</span>
+				</a>
+				<a class="menu_item" href="#">
+					<img src="img/home_thisMenu.png"/>
+					<span>主页</span>
+				</a>
+				<a class="menu_item" href="#">
+					<img src="img/home_thisMenu.png"/>
+					<span>主页</span>
+				</a>
+			<!--</div>-->
+		</div>
+		<!--桌面-->
+		<div class="desk">
+			<!--app列表-->
+			<ul class="appList">	
+				<!--<li class="appItem" v-for="item,index in list">
+					<img src="{{item.ico}}" />
+					<span>{{item.name}}</span>
+				</li>-->
+			</ul>
+		</div>
+		<!--列表清单-->
+		<section class="todoapp">
+			<todo_header @addfn="addFn"></todo_header>
+			<todo_comtent :list="list" :hash="hash" @checkall="checkAllFn" @delefn="deleFn"></todo_comtent>
+			<todo_footer :list="list" :hash="hash" @clearfn="clearFn"></todo_footer>
+			<div class="todoTip">任务列表</div>
+		</section>
+		<!--右键菜单-->
+		<div class="context_menu">
+			<ul class="menu_list">
+				<li>
+					<span class="icon"></span>
+					<span class="title">查看(V)</span>
+					<i class="ic arrow"></i>
+					<ul class="menu2">
+						<li>大图标</li>
+						<li>小图标</li>
+					</ul>
+				</li>
+				<li>
+					<span class="icon"></span>
+					<span class="title">排序方式(O)</span>
+					<i class="ic arrow"></i>
+					<ul class="menu2">
+						<li>按日期</li>
+						<li>按名称</li>
+					</ul>
+				</li>
+				<li>
+					<span class="icon"></span>
+					<span class="title">刷新(E)</span>
+				</li>
+				<li>
+					<span class="icon"></span>
+					<span class="title">新建文件夹(N)</span>
+				</li>
+				<li>
+					<span class="icon"></span>
+					<span class="title">显示设置</span>
+				</li>
+				<li>
+					<span class="icon"></span>
+					<span class="title">个性化</span>
+				</li>
+				<li>
+					<span class="icon"></span>
+					<span class="title">控制面板</span>
+				</li>
+				<li>
+					<span class="icon"></span>
+					<span class="title">注销</span>
+				</li>
+			</ul>
+		</div>	
+		<!--底部导航栏-->
+		<footer class="footMune">
+			<ul class="thumbList"></ul>
+		</footer>
+	</body>
+	<script src="js/data.js"></script>
+	<script src="tools/vue.js"></script>
+	<script src="tools/jquery-3.1.1.js"></script>
+	<script src="js/todo.js"></script>
+	<script src="js/jquery.dialog.js"></script>
+	<script src="js/jquery.drag.js"></script>
+	<script src="js/desk.js"></script>
+	<script type="text/javascript">
+//		$.dialog();
+	</script>
+</html>

@@ -1,0 +1,78 @@
+.popBox{
+	position: absolute;
+	width: 990px;
+	height: 540px;
+	border: 1px solid rgba(0,0,0,.8);
+	border-radius: 5px;
+	box-shadow: 0 3px 7px 3px rgba(0,0,0,.4);
+	z-index: 500;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.popBox.active{
+	z-index: 9999;
+}
+.mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(10,10,10,.4);
+	z-index: 100;
+}
+.pop_title{
+	margin: 0;
+	height: 30px;
+	background-color: rgba(0,0,0,.7);
+	border-radius: 4px 4px 0 0;
+	padding: 0 10px;
+}
+.title_box{
+	float: left;
+	width: calc(100% - 60px);
+	font:18px/30px "微软雅黑";
+	color: #fff;
+	cursor: move;
+}
+.pop_change{
+	width: 60px;
+	float: right;
+	padding: 5px 0;
+}
+.pop_min,.pop_max,.pop_close{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: url(black/bg_css3.png) no-repeat;
+	cursor: pointer;
+}
+.pop_min{
+	background-position: 0 -192px;
+}
+.pop_max{
+	background-position: 0 -152px;
+}
+a.pop_max_min{
+	background-position: 0 -112px;
+}
+.pop_close{
+	background-position: 0 -72px;
+}
+.pop_min:hover{
+	background-position-y:-212px;
+}
+.pop_max:hover{
+	background-position-y:-172px;
+}
+a.pop_max_min:hover{
+	background-position-y:-132px;
+}
+.pop_close:hover{
+	background-position-y:-92px;
+}
+
+.pop_content{
+	height: calc(100% - 30px);
+	background: #fff;
+}
