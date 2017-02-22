@@ -4,32 +4,16 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/desk.css"/>
-		<link rel="stylesheet" type="text/css" href="css/todo.css"/>
+		<link rel="stylesheet" type="text/css" href="app/todo/todo.css"/>
 		<link rel="stylesheet" type="text/css" href="css/popUp.css"/>
 	</head>
 	<body>
 		<!--左侧导航栏-->
 		<div class="left_bar">
 			<ul class="left_nav">
-				<li title="应用时尚" class="fashion">
+				<!--<li title="应用时尚" class="fashion">
 					<img src="ico/appmarket.png"/>
-					<!--<div>应用商店</div>-->
-				</li>
-				<li title="腾讯QQ" class="qq">
-					<img src="ico/big.png"/>
-				</li>
-				<li title="微博">
-					<img src="ico/weibo.png"/>
-				</li>
-				<li title="邮箱">
-					<img src="ico/mail.png"/>
-				</li>
-				<li title="浏览器">
-					<img src="ico/internet.png"/>
-				</li>
-				<li title="QQ空间">
-					<img src="ico/zone.png"/>
-				</li>
+				</li>-->
 			</ul>
 			<div class="set_list">
 				<div class="pin_sound">
@@ -64,36 +48,34 @@
 		</div>
 		<!--顶部菜单栏-->
 		<div class="top_nav">
-			<!--<div class="menu_box">-->
-				<a class="menu_item" href="#">
-					<img src="img/home_thisMenu.png"/>
-					<span>主页</span>
-				</a>
-				<a class="menu_item" href="#">
-					<img src="img/home_thisMenu.png"/>
-					<span>主页</span>
-				</a>
-				<a class="menu_item" href="#">
-					<img src="img/home_thisMenu.png"/>
-					<span>主页</span>
-				</a>
-				<a class="menu_item" href="#">
-					<img src="img/home_thisMenu.png"/>
-					<span>主页</span>
-				</a>
-				<a class="menu_item" href="#">
-					<img src="img/home_thisMenu.png"/>
-					<span>主页</span>
-				</a>
-				<a class="menu_item" href="#">
-					<img src="img/home_thisMenu.png"/>
-					<span>主页</span>
-				</a>
-				<a class="menu_item" href="#">
-					<img src="img/home_thisMenu.png"/>
-					<span>主页</span>
-				</a>
-			<!--</div>-->
+			<a class="menu_item" href="#">
+				<img src="img/home_thisMenu.png"/>
+				<span>主页</span>
+			</a>
+			<a class="menu_item" href="#">
+				<img src="img/home_thisMenu.png"/>
+				<span>主页</span>
+			</a>
+			<a class="menu_item" href="#">
+				<img src="img/home_thisMenu.png"/>
+				<span>主页</span>
+			</a>
+			<a class="menu_item" href="#">
+				<img src="img/home_thisMenu.png"/>
+				<span>主页</span>
+			</a>
+			<a class="menu_item" href="#">
+				<img src="img/home_thisMenu.png"/>
+				<span>主页</span>
+			</a>
+			<a class="menu_item" href="#">
+				<img src="img/home_thisMenu.png"/>
+				<span>主页</span>
+			</a>
+			<a class="menu_item" href="#">
+				<img src="img/home_thisMenu.png"/>
+				<span>主页</span>
+			</a>
 		</div>
 		<!--桌面-->
 		<div class="desk">
@@ -112,6 +94,12 @@
 			<todo_footer :list="list" :hash="hash" @clearfn="clearFn"></todo_footer>
 			<div class="todoTip">任务列表</div>
 		</section>
+		<!--日历-->
+		<iframe class="calendar" src="app/Calendar/index.html" scrolling="no" frameborder="0" ></iframe>
+		<div class="time_box">
+			<div class="time">20:11</div>
+			<div class="date">2017/2/21</div>
+		</div>
 		<!--右键菜单-->
 		<div class="context_menu">
 			<ul class="menu_list">
@@ -167,11 +155,8 @@
 	<script src="js/data.js"></script>
 	<script src="tools/vue.js"></script>
 	<script src="tools/jquery-3.1.1.js"></script>
-	<script src="js/todo.js"></script>
+	<script src="app/todo/todo.js"></script>
 	<script src="js/jquery.dialog.js"></script>
 	<script src="js/jquery.drag.js"></script>
 	<script src="js/desk.js"></script>
-	<script type="text/javascript">
-//		$.dialog();
-	</script>
 </html>

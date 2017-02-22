@@ -23,7 +23,6 @@
 				this.defaults[attr] = options[attr];
 			}
 		}
-		
 		this.content = this.defaults.content? this.defaults.content : `<iframe src=${this.defaults.url} width="100%" height="100%" frameborder="0"></iframe>`
 		this.init();
 	}

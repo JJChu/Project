@@ -16,10 +16,17 @@ leftNavHtml(data.leftNav);
 
 $('.left_nav').on('click',function(e){
 	var target = e.target.closest('li');
-	$.dialog({
-		title:target.title,
-		url:target.dataset.url
-	});
+	if ($(target).attr('diaonoff')==='false') {
+		$(target).attr('diaonoff',true);
+		$.dialog({
+			title:target.title,
+			url:target.dataset.url,
+			ico:$(target).find('img').attr('src'),
+			closeBack(){
+				$(target).attr('diaonoff',false);
+			}
+		});
+	}
 })
 $('.sound').on('click',function(){		//声音按钮
 	$(this).toggleClass('sound_close');
@@ -28,20 +35,24 @@ $('.window').on('click',function(e){
 	$('.win_box').toggleClass('win_hide');
 	e.stopPropagation();
 })
-$('.setItem').on('click',function(){		//声音按钮
-	$.dialog({
-		title:'主题设置',
-		content:themeHtml(),
-		ico:'ico/5.png',
-		closeBack(){
-			$(target).attr('diaonoff',false);
-		}
-	});
+
+$('.style').attr('diaonoff',false);
+$('.style').on('click',function(e){		//主题按钮
+	if ($(this).attr('diaonoff') === 'false') {
+		$('.style').attr('diaonoff',true);
+		var _this = this;
+		$.dialog({
+			title:'主题设置',
+			content:themeHtml(),
+			ico:'ico/5.png',
+			closeBack(){
+				$(_this).attr('diaonoff',false);
+			}
+		});
+	}
 	$('.themeList').on('click','li',changeStyle);
 })
 function changeStyle(){
-	console.log($('body'));
-//	document.body.style.backgroundImage = $(this).attr('url');
 	$('body').css('background-image','url('+$(this).attr('url')+')');
 }
 function themeHtml(){
@@ -51,31 +62,45 @@ function themeHtml(){
 				</div>
 				<ul class="themeList">
 					<li url="img/bg/theme_blue.jpg">
-						<img src="img/theme_blue.jpg" />
+						<img src="img/bg/theme_blue.jpg" />
 						<div>梦幻光影</div>
 					</li>
-					<li>
-						<img src="img/theme_pinky_night.jpg" />
+					<li url="img/bg/theme_pink.jpg">
+						<img src="img/bg/theme_pink.jpg" />
 						<div>粉红之夜</div>
 					</li>
-					<li>
-						<img src="img/theme_green.jpg" />
+					<li url="img/bg/theme_green.jpg">
+						<img src="img/bg/theme_green.jpg" />
 						<div>青青世界</div>
 					</li>
-					<li>
-						<img src="img/theme_wood1.jpg" />
+					<li url="img/bg/theme_wood.jpg">
+						<img src="img/bg/theme_wood.jpg" />
 						<div>温馨木纹</div>
 					</li>
-					<li>
-						<img src="img/theme_wood2.jpg" />
-						<div>黑色木纹</div>
+					<li url="img/bg/theme_cartoon.jpg">
+						<img src="img/bg/theme_cartoon.jpg" />
+						<div>卡通动漫</div>
 					</li>
 				</ul>
 			</div`
 }
 
-
 //-----------------------------顶部导航栏----------------------------
+
+//根据数据生成导航栏
+function topNavHtml(data){
+	var html = '';
+	for (var i = 0; i < data.length; i++) {
+		html += `
+			<a class="menu_item" href="#" data-url=${data[i].url} diaonoff=${data[i].diaOnoff}>
+				<img src=${data[i].ico}/>
+				<span>${data[i].name}</span>
+			</a>
+		`;
+	}
+	$('.top_nav').html(html);
+}
+topNavHtml(data.topNav);
 
 $(document).on('mousemove',[document,'.menu_item'],appleMenu);
 function appleMenu(ev){
@@ -100,22 +125,40 @@ function appleMenu(ev){
 		$(item).css('width',((iMax-d)/iMax)*80+40+"px");
 	})
 }
+//单击出现弹框
+$('.menu_item').on('click',function(e){
+	var target = $(e.target).closest('a');
+	if ($(target).attr('diaonoff')==='false') {
+		$(target).attr('diaonoff',true);
+		$.dialog({
+			title:'顶部',
+			url:'weiyun.html',
+			ico:'ico/5.png',
+			closeBack(){
+				$(target).attr('diaonoff',false);
+			}
+		});
+	}
+})
+
 
 //----------------------------------桌面应用------------------------
 
+
+
 var appList = $('.appList');
 //生成app HTML
-function appHtml(appData){
+function appHtml(fileData){
 	var appHtml = '';
-	for (var i = 0; i < appData.length; i++) {
-		appHtml += `<li class="appItem" diaonoff=${appData[i].diaOnoff} data-id=${appData[i].id} data-name=${appData[i].name} data-url=${appData[i].url}>
-						<img src=${appData[i].ico}/>
-						<span>${appData[i].name}</span>
+	for (var i = 0; i < fileData.length; i++) {
+		appHtml += `<li class="appItem" diaonoff=${fileData[i].diaOnoff} data-id=${fileData[i].id} data-name=${fileData[i].name} data-url=${fileData[i].url}>
+						<img src=${fileData[i].ico}/>
+						<span>${fileData[i].name}</span>
 					</li>`
 	}
 	appList.html(appHtml);
 }
-appHtml(appData);
+appHtml(fileData);
 
 //var appItems = $('.appItem',appList);
 
@@ -151,7 +194,6 @@ $(document).on('mousedown','.appList',function(e){
 	preTop = target.position().top;
 	disX = e.clientX - preLeft;
 	disY = e.clientY - preTop;
-	console.log(target[0].dataset.id);
 	targetId = target[0].dataset.id;
 	$(document).on('mousemove',moveFn);
 	$(document).on('mouseup',upFn);
@@ -164,15 +206,20 @@ function moveFn(e){
 function upFn(){
 	var appItems = $('.appItem',appList);
 	for (var i = 0; i < appItems.length; i++) {
-		if (appItems[i] == target.get(0)) {
+		if (appItems[i] === target.get(0)) {
 			continue;
 		}else{
 			if (hit(target.get(0),appItems[i])) {	//碰撞到
 				hitTarget = appItems[i];
-				hitLeft = appItems[i].offsetLeft;
-				hitTop = appItems[i].offsetTop;
-				hitTargetId = hitTarget.dataset.id;
-				dataFn.exchangeData(targetId,hitTargetId,appData);	//交换数据
+				if (hitTarget.dataset.id == 1) {
+					dataFn.deleDataById(target[0].dataset.id,fileData);
+					target.remove();
+				} else{
+					hitLeft = appItems[i].offsetLeft;
+					hitTop = appItems[i].offsetTop;
+					hitTargetId = hitTarget.dataset.id;
+					dataFn.exchangeData(targetId,hitTargetId,fileData);	//交换数据
+				}
 				break;
 			}else{
 				hitTarget = null;
@@ -183,7 +230,9 @@ function upFn(){
 	}
 	if (hitLeft!=null && hitTop!=null) {
 		target.css({'left':hitLeft,'top':hitTop});
-		$(hitTarget).css({'left':preLeft,'top':preTop})
+		if (hitTarget.dataset.id != 1) {
+			$(hitTarget).css({'left':preLeft,'top':preTop})
+		}
 	} else{
 		target.css({'left':preLeft,'top':preTop});
 	}
@@ -199,15 +248,24 @@ function hit(obj1,obj2){	//pos1拖拽元素   pos2检测元素
     return pos1.right > (pos2.left + pos2W/2) && pos1.left < (pos2.right - pos2W/2) && pos1.bottom > (pos2.top + pos2H/2) && pos1.top < (pos2.bottom - pos2H/2);
 }
 
-//点击出现弹框
+//单击选中
+appList.on('click',function(ev){
+	var target = ev.target.closest('li');
+	$('.appItem').removeClass('selected');
+	$(target).addClass('selected');
+	if ($(target).is('.appItem')) {
+		ev.stopPropagation();
+	}
+})
+
+//双击出现弹框
 appList.on('dblclick',function(ev){
 	var target = ev.target.closest('li');
-	console.log("11");
 	if ($(target).attr('diaonoff')==='false') {
 		$(target).attr('diaonoff',true);
 		$.dialog({
 			title:target.dataset.name,
-			url:target.dataset.url,
+			content:"<h2>暂无功能</h2>",
 			ico:$(target).find('img').attr('src'),
 			closeBack(){
 				$(target).attr('diaonoff',false);
@@ -271,19 +329,37 @@ $(document).on('click',function(ev){
 			window.location.reload() 
 			break;
 		case $('.menu_list>li')[3]:				//新建文件夹
-			appData.push(
+			fileData.push(
 				{
-					name:"新建文件夹",
+					name:dataFn.fileNum(fileData),
 					ico:"ico/file.png",
 					id:Math.random(),
 					url:"weiyun.html",
 					diaOnoff:false
 				});
-			appHtml(appData);
+			appHtml(fileData);
 			appPos();
 			break;
 			
 	}
 	$('.win_box').removeClass('win_hide');
 	$('.context_menu').hide();
+	$('.calendar').removeClass('show');
+	$('.appItem').removeClass('selected');
+})
+
+//------------------------------------时间------------------------
+
+function getTime(){
+	var time = new Date();
+	$('.time').text(time.getHours()+':'+time.getMinutes()+':'+time.getSeconds());
+	$('.date').text(time.getFullYear()+' / '+time.getMonth()+' / '+time.getDate())
+}
+getTime();
+setInterval(function(){
+	getTime();
+},1000)
+$('.time_box').on('click',function(e){
+	$('.calendar').toggleClass('show');
+	e.stopPropagation();
 })
