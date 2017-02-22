@@ -48,9 +48,6 @@
 			
 			document.onmousemove = this.moveFn.bind(this);
 			document.onmouseup = this.upFn.bind(this);
-			
-//			document.addEventListener('mousemove',this.moveFn.bind(this));
-//			document.addEventListener('mouseup',this.upFn.bind(this));
 			e.preventDefault();
 		},
 		moveFn(e){
@@ -66,15 +63,13 @@
 		upFn(){
 			this.pos.x = this.x;
 			this.pos.y = this.y;
-			if (this.defaults.upBack&&(this.x > document.documentElement.clientWidth - this.ele.offsetWidth -10)) {
+			if (this.defaults.upBack && (this.x > document.documentElement.clientWidth - this.ele.offsetWidth -10)) {
 				this.defaults.upBack();
 			}else if(this.defaults.upGo){
 				this.defaults.upGo();
 			}
 			document.onmousemove = null;
 			document.onmouseup = null;
-//			document.removeEventListener('mousemove',this.moveFn);
-//			document.removeEventListener('mouseup',this.upFn);
 		},
 		limit(){
 			if( this.x < 0 ){
