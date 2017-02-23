@@ -6,7 +6,7 @@ function leftNavHtml(data){
 	for (var i = 0; i < data.length; i++) {
 		html += `
 			<li title=${data[i].name} data-url=${data[i].url} diaonoff=${data[i].diaOnoff} >
-				<img src=${data[i].ico}/>
+				<img src=${data[i].ico} />
 			</li>
 		`;
 	}
@@ -93,7 +93,7 @@ function topNavHtml(data){
 	for (var i = 0; i < data.length; i++) {
 		html += `
 			<a class="menu_item" href="#" data-url=${data[i].url} diaonoff=${data[i].diaOnoff}>
-				<img src=${data[i].ico}/>
+				<img src=${data[i].ico} />
 				<span>${data[i].name}</span>
 			</a>
 		`;
@@ -152,7 +152,7 @@ function appHtml(fileData){
 	var appHtml = '';
 	for (var i = 0; i < fileData.length; i++) {
 		appHtml += `<li class="appItem" diaonoff=${fileData[i].diaOnoff} data-id=${fileData[i].id} data-name=${fileData[i].name} data-url=${fileData[i].url}>
-						<img src=${fileData[i].ico}/>
+						<img src=${fileData[i].ico} />
 						<span>${fileData[i].name}</span>
 					</li>`
 	}

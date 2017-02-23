@@ -84,7 +84,7 @@
 		thumbHtml(){
 			var thumbLi = document.createElement("li");
 			thumbLi.className = 'thumbItem selected';
-			var boxHtml = `<img src=${this.defaults.ico}/>
+			var boxHtml = `<img src=${this.defaults.ico} />
 						   <span id="">${this.defaults.title}</span>`;
 			thumbLi.innerHTML = boxHtml;
 			return thumbLi;
