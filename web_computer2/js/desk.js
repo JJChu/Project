@@ -376,7 +376,7 @@ $(document).on('click',function(ev){
 		case $('.menu_list>li')[3]:				//新建文件夹
 			fileData[nowAppList].push(
 				{
-					name:dataFn.fileNum(fileData.appList1),
+					name:dataFn.fileNum(fileData[nowAppList]),
 					ico:"ico/file.png",
 					id:Math.random(),
 					url:"weiyun.html",
