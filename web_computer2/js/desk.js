@@ -161,10 +161,10 @@ $('.appList1').css('left',0);
 function appHtml(fileData){
 	var appHtml = '';
 	for (var i = 0; i < fileData.length; i++) {
-		appHtml += `<li class="appItem" diaonoff=${fileData[i].diaOnoff} data-id=${fileData[i].id} data-name=${fileData[i].name} data-url=${fileData[i].url}>
+		appHtml += `<li class="appItem" diaonoff=${fileData[i].diaOnoff} data-id=${fileData[i].id} data-name=${fileData[i].name} data-url=${fileData[i].url} >
 						<img src=${fileData[i].ico} />
 						<span>${fileData[i].name}</span>
-					</li>`
+					</li>`;
 	}
 	return appHtml;
 }
@@ -283,14 +283,26 @@ appList.on('dblclick',function(ev){
 	var target = ev.target.closest('li');
 	if ($(target).attr('diaonoff')==='false') {
 		$(target).attr('diaonoff',true);
-		$.dialog({
-			title:target.dataset.name,
-			content:deleFile(fileData.appList1[0].deleData),
-			ico:$(target).find('img').attr('src'),
-			closeBack(){
-				$(target).attr('diaonoff',false);
-			}
-		});
+		if (target.dataset.id == 1) {
+			$.dialog({
+				title:target.dataset.name,
+				content:deleFile(fileData.appList1[0].deleData),
+				ico:$(target).find('img').attr('src'),
+				closeBack(){
+					$(target).attr('diaonoff',false);
+				}
+			});
+		}else{
+			$.dialog({
+				title:target.dataset.name,
+				url:target.dataset.url,
+				ico:$(target).find('img').attr('src'),
+				closeBack(){
+					$(target).attr('diaonoff',false);
+				}
+			});
+		}
+			
 	}
 	
 });

@@ -259,7 +259,7 @@ a{
 .appItem span{
 	display: inline-block;
 	height: 20px;
-	min-width: 55px;
+	min-width: 65px;
 	background-color: rgba(100,100,100,.4);
 	border-radius: 10px;
 	line-height: 20px;
@@ -487,6 +487,7 @@ a{
 	color: #fff;
 	text-align: center;
 	transform: skewX(-20deg);
+	border-radius: 5px 0 0 0;
 	cursor: pointer;
 }
 .time_box .time,.date{

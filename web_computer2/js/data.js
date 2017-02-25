@@ -80,9 +80,9 @@ var data ={
 			diaOnoff:false
 		},
 		{
-			name:"邮箱",
-			ico:"ico/mail.png",
-			url:"weiyun.html",
+			name:"QQ",
+			ico:"ico/big.png",
+			url:"http://web2.qq.com/",
 			diaOnoff:false
 		},
 		{
@@ -92,9 +92,9 @@ var data ={
 			diaOnoff:false
 		},
 		{
-			name:"QQ邮箱",
+			name:"QQ空间",
 			ico:"ico/zone.png",
-			url:"weiyun.html",
+			url:"http://qzone.qq.com/",
 			diaOnoff:false
 		}
 	],
@@ -142,101 +142,165 @@ var fileData = {
 		{
 			name:"回收站",
 			ico:"ico/recycle.png",
+			url:"",
 			id:1,
 			diaOnoff:false,
 			deleData:[]
 		},
 		{
+			name:"微博",
+			ico:"ico/weibo.png",
+			url:"http://weibo.com/",
+			id:8,
+			diaOnoff:false
+		},
+		{
 			name:"读览天下",
 			ico:"ico/readGod.png",
+			url:"http://www.xiami.com/",
 			id:2,
 			diaOnoff:false
 		},
 		{
-			name:"金山快盘",
-			ico:"ico/jinshan.png",
+			name:"百度云",
+			ico:"ico/baiduyun.png",
+			url:"http://yun.baidu.com/",
 			id:3,
 			diaOnoff:false
 		}
 	],
 	appList2:[
 		{
+			name:"网易邮箱",
+			ico:"ico/wyemail.png",
+			url:"http://mail.163.com/",
+			id:4,
+			diaOnoff:false
+		},
+		{
+			name:"QQ邮箱",
+			ico:"ico/mail.png",
+			url:"https://mail.qq.com/",
+			id:4,
+			diaOnoff:false
+		},
+		{
 			name:"芒果旅游",
 			ico:"ico/mangguo.png",
+			url:"http://www.mangocity.com/",
 			id:5,
 			diaOnoff:false
 		},
 		{
 			name:"团购地图",
 			ico:"ico/tuanmap.png",
+			url:"http://map.baidu.com/",
 			id:6,
 			diaOnoff:false
 		},
 		{
 			name:"快递查询",
 			ico:"ico/fastsearch.png",
-			id:6,
+			url:"http://www.kuaidi100.com/",
+			id:7,
 			diaOnoff:false
 		},
 		{
 			name:"网络硬盘",
 			ico:"ico/wangdesk.png",
-			id:6,
+			url:"http://pan.baidu.com/",
+			id:8,
 			diaOnoff:false
 		}
 	],
 	appList3:[
 		{
+			name:"网易云音乐",
+			ico:"ico/wangyi.png",
+			url:"http://www.xiami.com/",
+			id:4,
+			diaOnoff:false
+		},
+		{
+			name:"QQ音乐",
+			ico:"ico/qqmusic.png",
+			url:"https://y.qq.com/",
+			id:5,
+			diaOnoff:false
+		},
+		{
 			name:"虾米电台",
 			ico:"ico/xiami.png",
-			id:5,
+			url:"http://www.xiami.com/",
+			id:6,
 			diaOnoff:false
 		},
 		{
 			name:"音乐盒子",
 			ico:"ico/musicbox.png",
-			id:5,
+			url:"http://play.baidu.com/",
+			id:7,
 			diaOnoff:false
 		}
 	],
 	appList4:[
 		{
-			name:"奥尔视频",
+			name:"优酷",
+			ico:"ico/youku.png",
+			url:"http://www.youku.com/",
+			id:4,
+			diaOnoff:false
+		},
+		{
+			name:"爱奇艺",
+			ico:"ico/aiqiyi.png",
+			url:"http://www.iqiyi.com/",
+			id:5,
+			diaOnoff:false
+		},
+		{
+			name:"腾讯视频",
 			ico:"ico/vadio.png",
+			url:"https://v.qq.com/",
 			id:5,
 			diaOnoff:false
 		},
 		{
 			name:"乐视网",
 			ico:"ico/leshi.png",
+			url:"http://www.le.com/",
 			id:5,
 			diaOnoff:false
 		}
 	],
 	appList5:[
 		{
-			name:"奥尔视频",
-			ico:"ico/vadio.png",
+			name:"好友近况",
+			ico:"ico/friendnear.png",
+			url:"",
 			id:5,
 			diaOnoff:false
 		},
 		{
-			name:"乐视网",
-			ico:"ico/leshi.png",
+			name:"时钟",
+			ico:"ico/time.png",
+			url:"app/watch/index.html",
 			id:5,
 			diaOnoff:false
 		}
 	],
 	appList6:[
 		{
-			name:"奥尔视频",
-			ico:"ico/vadio.png",
+			name:"日历",
+			ico:"img/calendar_thisMenu.png",
+			url:"app/Calendar/index.html",
 			id:5,
 			diaOnoff:false
 		},
 		{
-			name:"乐视网",
-			ico:"ico/leshi.png",
+			name:"便签",
+			ico:"ico/bianqian.png",
+			url:"",
 			id:5,
 			diaOnoff:false
 		}
