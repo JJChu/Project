@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 500px;
+				height: 500px;
+				background: #fff;
+				border: 5px dotted #4D4D4D;
+				position: relative;
+				float: left;
+			}
+			#box div{
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				position: absolute;
+			}
+			#control{
+				float: left;
+				width: 100px;
+				height: 100px;
+				position: relative;
+			}
+			input{
+				position: absolute;
+			}
+			input:nth-of-type(1){
+				left: 50px;
+				top: 0;
+			}
+			input:nth-of-type(2){
+				left: 50px;
+				top: 50px;
+			}
+			input:nth-of-type(3){
+				left: 0;
+				top: 25px;
+			}
+			input:nth-of-type(4){
+				left: 100px;
+				top: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+			var box = document.getElementById("box");
+			var inps = document.getElementsByTagName("input");
+			var str = "";
+			for (var i=0;i<400;i++) {
+				str += "<div style='left:"+i%20*25+"px;top:"+Math.floor(i/20)*25+"px'></div>";
+			}
+			box.innerHTML = str;
+			var divs = box.getElementsByTagName("div");
+			var arrPos = [[0,0],[1,0],[2,0],[3,0],[4,0]];
+			var x = 0;
+			var y = 0;
+			var last = [0,0];
+			var lOnoff = true;
+			var rOnoff = true;
+			var tOnoff = true;
+			var bOnoff = true;
+			var begin = false;
+			var timer = null;
+			var arrFood = [];
+			document.onkeydown = function(ev){
+				if (ev.keyCode == 39 && rOnoff) {
+					begin = true;
+					clearInterval(timer);
+					x = arrPos[arrPos.length-1][0]+1;
+					y = arrPos[arrPos.length-1][1];
+					if (pan()) {
+						timer = setInterval(function(){
+							x = arrPos[arrPos.length-1][0]+1;
+							y = arrPos[arrPos.length-1][1];
+							beginG();
+						},500)
+					}
+					beginG();
+					lOnoff = false;
+					tOnoff = true;
+					bOnoff = true;
+					return;
+				}
+				
+				if (ev.keyCode == 40 && bOnoff) {
+					begin = true;
+					clearInterval(timer);
+					x = arrPos[arrPos.length-1][0];
+					y = arrPos[arrPos.length-1][1]+1;
+					if (pan()) {
+						timer = setInterval(function(){
+							x = arrPos[arrPos.length-1][0];
+							y = arrPos[arrPos.length-1][1]+1;
+							beginG();
+						},500)
+					}
+					beginG();	
+					tOnoff = false;
+					lOnoff = true;
+					rOnoff = true;
+						return;
+				}
+				if (ev.keyCode == 38 && tOnoff) {
+					begin = true;
+					clearInterval(timer);
+					x = arrPos[arrPos.length-1][0];
+					y = arrPos[arrPos.length-1][1]-1;
+					if (pan()) {
+						timer = setInterval(function(){
+							console.log("1");
+							x = arrPos[arrPos.length-1][0];
+							y = arrPos[arrPos.length-1][1]-1;
+							beginG();
+						},500);
+					}
+					beginG();
+					bOnoff = false;
+					lOnoff = true;
+					rOnoff = true;
+					return;
+				}
+				if (begin && ev.keyCode == 37 && lOnoff) {
+					clearInterval(timer);
+					x = arrPos[arrPos.length-1][0]-1;
+					y = arrPos[arrPos.length-1][1];
+					if (pan()) {
+						timer = setInterval(function(){
+							x = arrPos[arrPos.length-1][0]-1;
+							y = arrPos[arrPos.length-1][1];
+							beginG();
+						},500)
+					}
+					beginG();
+					rOnoff = false;
+					tOnoff = true;
+					bOnoff = true;
+				}
+			}
+			work(arrPos);
+			food();
+			function pan(){
+				if (x<0 || x>19 || y<0 || y>19 || die()) {//判断死亡
+					return false;
+				}
+				return true;
+			}
+			function beginG(){//开始执行
+				last = arrPos[0];
+				if (pan()) {
+					arrPos.push([x,y]);
+					arrPos.shift();
+					var lastNum = last[1]*20 + last[0];
+					eatFood();
+					work(arrPos);
+					divs[lastNum].style.background = "";
+				}else{
+					clearInterval(timer);
+					alert("Game Over");
+					lOnoff = true;
+					rOnoff = true;
+					tOnoff = true;
+					bOnoff = true;
+					begin = false;
+					x=4;
+					y=0;
+					arrPos = [[0,0],[1,0],[2,0],[3,0],[4,0]];
+					for (var i=0;i<400;i++) {
+						divs[i].style.background = "";
+					}
+					last = null;
+					work(arrPos);
+					food();
+				}
+			}
+			function work(arr){// div变色函数
+				for (var i=0;i<arr.length;i++) {
+					var posNum = arr[i][1]*20 + arr[i][0];
+					divs[posNum].style.background = "#FF00B1";
+				}
+				divs[arr[arr.length-1][1]*20 + arr[arr.length-1][0]].style.background = "url(img/snake.png) no-repeat center";
+				divs[arr[arr.length-1][1]*20 + arr[arr.length-1][0]].style.backgroundSize = "120%";
+			}
+			function food(){//生成随机的食物
+				var xFood = Math.floor(Math.random()*20); 
+				var yFood = Math.floor(Math.random()*20);
+				for (var i = 0; i < arrPos.length; i++) {
+					if (xFood==arrPos[i][0]&&yFood==arrPos[i][1]) {
+						food();
+						return;
+					}
+				}
+				arrFood = [[xFood,yFood]];
+				work(arrFood);
+				divs[arrFood[0][1]*20 + arrFood[0][0]].style.background = "url(img/food.png)";
+				divs[arrFood[0][1]*20 + arrFood[0][0]].style.backgroundSize = "98%";
+			}
+			function eatFood(){//吃食物,判断食物的位置是否与蛇头位置相同
+				if (x==arrFood[0][0] && y==arrFood[0][1]) {
+					food();
+					arrPos.unshift(last);
+					last = null;
+				}
+			}
+			function die(){//撞到自己
+				for (var i=0;i<arrPos.length-3;i++) {
+					if (x==arrPos[i][0]&&y==arrPos[i][1]) {
+						return true;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
