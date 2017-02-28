@@ -1,0 +1,467 @@
+body{
+	font: 12px Arial,Helvetica,sans-serif;
+	color: #333;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix{
+	_zoom:1;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.head{
+	width: 100%;
+}
+.head .head_top{												/*头部-top*/
+	height: 35px;
+	width: 100%;
+	background-color: #fafafa;
+	border-bottom: 1px solid #dbdbdb;
+}
+.head_top .top_content{
+	width: 1200px;
+	height: 35px;
+	margin: 0 auto;
+	position: relative;
+}
+.log{
+	width: 103px;
+	height: 37px;
+	border: 1px solid #f0f0f0;
+	line-height: 35px;
+	text-align: center;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.log .log_ico{
+	overflow: hidden;
+	width: 7px;
+	height: 4px;
+	background: url(../img/ico-1.png) no-repeat -17px -240px;
+	position: absolute;
+	left: 48px;
+	bottom: 0;
+}
+.log .ico_kuang{
+	overflow: hidden;
+	width: 51px;
+	height: 2px;
+	border: 1px solid #f0f0f0;
+	border-top:1px solid #fff;
+	background-color: #fff;
+	position: absolute;
+	left: 25px;
+	bottom: -4px;
+}
+.log a{
+	color: #0066cc;
+}
+.sent{
+	width: 126px;
+	height: 27px;
+	padding-top: 8px;
+	position: absolute;
+	left: 108px;
+	top: 0;
+	background:url(../img/car-ico.png) no-repeat right 8px;
+}
+.sent .md{
+	display: inline-block;
+	width: 44px;
+	height: 18px;
+	border: 1px solid #dbdbdb;
+	background-color: #fff;
+	line-height: 18px;
+	position: relative;
+}
+.md .md_text{
+	font-weight: bold;
+	margin-left: 5px;
+}
+.sent .md_ico{
+	display: inline-block;
+	width: 6px;
+	height: 3px;
+	background: url(../img/ico-1.png) no-repeat -29px -240px;
+	position: absolute;
+	top: 7px;
+	right: 6px;
+}
+.mine{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 25px;
+	padding-top: 10px;
+}
+.mine .mine_item{
+	float: left;
+	height: 25px;
+}
+.mine .mine_item .text{
+	float: left;
+	line-height: 20px;
+	color: #666;
+}
+.mine .mine_item .mine_bg{
+	float: left;
+	width: 11px;
+	height: 11px;
+	background: url(../img/ico-1.png) no-repeat 0 0;
+	margin: 4px 0 0 5px;
+	overflow: hidden;
+}
+.mine .gang{
+	float: left;
+	width: 1px;
+	height: 11px;
+	background: url(../img/ico-1.png) no-repeat -11px 0;
+	margin: 4px 7px 0 7px;
+}
+.mine .wei{
+	float: left;
+	width: 16px;
+	height: 16px;
+}
+.mine .weibo{
+	background: url(../img/ico-1.png) no-repeat 0 -11px;
+	margin-right: 9px;
+}
+.mine .weixin{
+	background: url(../img/ico-1.png) no-repeat 0 -27px;
+}
+
+
+.head .head_search{
+	height: 134px;
+	width: 100%;
+	border-bottom: 2px solid #fd3f49;
+}
+.head_search .search_content{
+	width: 1200px;
+	height: 134px;
+	margin: 0 auto;
+	position: relative;
+}
+.title{
+	float: left;
+	margin-top: 16px;
+}
+.title .logo{
+	display: block;
+	width: 179px;
+	padding-top: 69px;
+	height: 0;
+	overflow: hidden;
+	background: url(../img/ico-3.png) no-repeat 0 0;
+}
+.found{
+	float: left;
+	width: 528px;
+	height: 56px;
+	margin: 20px 0 0 139px;
+}
+.found .kuang{
+	height: 28px;
+	padding: 2px;
+	background-color: #ff3c3c;
+	overflow: hidden;
+}
+.found .kuang .xuan{
+	float: left;
+	width: 68px;
+	height: 28px;
+	border-left: 1px solid #e1e1e1;
+	border-right: 1px solid #e1e1e1;
+	background-color: #f8f8f8;
+}
+.found .kuang .xuan .xuan_text{
+	float: left;
+	line-height: 28px;
+	margin-left: 15px;
+}
+.found .kuang .xuan .xuan_ico{
+	float: left;
+	width: 7px;
+	height: 4px;
+	background: url(../img/ico-1.png) no-repeat -35px 0;
+	margin: 12px 12px 0 10px;
+	overflow: hidden;
+}
+.found .kuang form input{
+	float: left;
+	width: 356px;
+	height: 28px;
+}
+.kuang .sousuo{
+	float: left;
+	width: 98px;
+	height: 28px;
+	font: 12px/28px "微软雅黑";
+	color: #fff;
+	text-align: center;
+}
+.found .hot_search{
+	line-height: 30px;
+	word-spacing: 7px;
+}
+.found .hot_search .hot_text{
+	color: #999999;
+}
+.buy{
+	width: 206px;
+	height: 119px;
+	float: right;
+	margin-top: 15px;
+	position: relative;
+}
+.buy .buy_top .fuli{
+	float: left;
+	width: 60px;
+	height: 43px;
+	text-align: center;
+	border: 1px solid #f2f2f2;
+	margin-top:4px;
+	background-color: #fcfcfc;
+}
+.buy .buy_top .fuli .fuli_ico{
+	display: block;
+	width: 22px;
+	height: 15px;
+	background:url(../img/ico-1.png) no-repeat 0 -43px;
+	margin: 4px 0 5px 19px;
+}
+.buy .buy_top .fuli .fuli_text{
+	display: block;
+	color: #999999;
+}
+.buy .buy_top .fuli .fuli_jian{
+	display: block;
+	width: 5px;
+	height: 3px;
+	background:url(../img/ico-1.png) no-repeat -16px 0;
+	margin: 1px 28px 0 27px;
+	overflow: hidden;
+}
+.buy .buy_top .dingdan{
+	border-right: none;
+}
+.buy .buy_top .fuli .dingdan_ico{
+	background-position: 0 -58px;
+}
+.buy_top .buycar{
+	float: left;
+	width: 83px;
+	height: 30px;
+	padding-top: 19px;
+	background-color: #ff3c3c;
+	position: relative;
+}
+.buycar .car_ico{
+	display: inline-block;
+	width: 16px;
+	height: 14px;
+	background: url(../img/ico-1.png) no-repeat 0 -73px;
+	margin: 0 5px 0 10px;
+	overflow: hidden;
+}
+.buycar .car_text{
+	color: #fff;
+	font-family: "宋体";
+}
+.buycar .car_jiao{
+	position: absolute;
+	left: -4px;
+	top: 0;
+	width: 4px;
+	height: 4px;
+	background: url(../img/ico-1.png) no-repeat -16px -3px;
+	overflow: hidden;
+}
+.buy_phone{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 203px;
+	height: 40px;
+	background: url(../img/ico-3.png) no-repeat 0 -69px;
+}
+
+.nav{
+	font:bold 12px "微软雅黑";
+	height: 34px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.nav .all{
+	float: left;
+	width: 168px;
+	height: 34px;
+	padding-right: 42px;
+	line-height: 38px;
+	color: #fff;
+	text-align: center;
+	background: url(../img/all_ico.jpg) no-repeat 187px 18px;
+	background-color: #ff3c3c;
+}
+.nav .main_nav{
+	float: left;
+	margin-left: 18px;
+	word-spacing: 35px;
+}
+.main_nav .nav_item{
+	line-height: 38px;
+	color: #333374;
+}
+.main_nav .nav_item:hover{
+	color: #ff3c3c;
+}
+.main_nav .hot_nav{
+	color: #ff3c3c;
+}
+
+/*底部*/
+.foot{
+	width: 100%;
+	height: 491px;
+	background-color: #fff;
+}
+.foot_content{
+	margin: 0 auto;
+	width: 1200px;
+}
+.fuwu{
+	border-bottom: 1px solid #ebebeb;
+}
+.fuwu_item{
+	width: 295px;
+	height: 126px;
+}
+.fuwu_ico{
+	margin: 30px 15px 0 45px;
+	width: 66px;
+	height: 66px;
+	background: url(../img/ico-1.png) no-repeat;
+}
+.fuwu_item .ico1{
+	background-position:0 -429px;
+}
+.fuwu_item .ico2{
+	background-position:0 -495px;
+}
+.fuwu_item .ico3{
+	background-position:0 -561px;
+}
+.fuwu_item .ico4{
+	background-position:0 -627px;
+}
+.fuwu_text{
+	margin-top: 38px;
+}
+.fuwu_text .text1{
+	font:bold 16px/27px arial;
+}
+.fuwu_text .text2{
+	font:12px/22px arial;
+	color: #999999;
+}
+.xiang{
+	padding: 22px 0 0 48px;
+}
+.xiang_item{
+	width: 148px;
+	padding-right: 20px;
+}
+.last{
+	width: 140px;
+}
+.erwei{
+	width: 90px;
+}
+.xiang_item dt{
+	font: bold 12px/30px arial;
+	color: #666;
+}
+.xiang_item dd{
+	line-height: 24px;
+}
+.xiang_item dd a{
+	color: #666;
+}
+.erwei .ma1{
+	display: block;
+	width: 90px;
+	height: 90px;
+	background: url(../img/ico-3.png) no-repeat 0 -109px;
+}
+.erwei1{
+	margin-right:81px ;
+}
+.erwei .ma2{
+	display: block;
+	width: 89px;
+	height: 89px;
+	background: url(../img/ico-3.png) no-repeat -114px -109px;
+}
+.about{
+	margin-top: 28px;
+	text-align: center;
+	word-spacing: 4px;
+	line-height: 27px;
+}
+.about a{
+	color: #666;
+}
+.about span{
+	color: #9b669b;
+}
+.about3{
+	color: #666;
+}
+.about4{
+	word-spacing: 3px;
+	margin-top: 17px;
+}
+.about4 a{
+	display: inline-block;
+	width: 90px;
+	height: 31px;
+	background: url(../img/ico-2.png) no-repeat;
+}
+.about4 .money1{
+	background-position: 0 0;
+}
+.about4 .money2{
+	background-position: 0 -31px;
+}
+.about4 .money3{
+	background-position: 0 -62px;
+}
+.about4 .money4{
+	background-position: 0 -93px;
+}
+.about4 .money5{
+	background-position: 0 -124px;
+}
+.about4 .money6{
+	background-position: 0 -155px;
+}
+.about4 .money7{
+	background-position: 0 -186px;
+}
+.about4 .money8{
+	background-position: 0 -217px;
+}
+.about4 .money9{
+	background-position: 0 -248px;
+}

@@ -1,0 +1,374 @@
+.ad{
+	width: 100%;
+	height: 120px;
+	background-color: #ece8e5;
+}
+.ad_content{
+	height: 120px;
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.ad_pic{
+	position: absolute;
+	left: 174px;
+	top: 30px;
+}
+/*内容*/
+.content_content{
+	width: 1200px;
+	margin: 0 auto;
+}
+/*购物车部分*/
+.car_nav{
+	height: 49px;
+}
+.all_nav{
+	line-height: 40px;
+}
+.jian_right{
+	display: inline-block;
+	width: 6px;
+	height: 9px;
+	background: url(../img/detail/ico-1.png) no-repeat 0 0;
+	overflow: hidden;
+	margin: 0 15px;
+}
+.store{
+	height: 16px;
+	margin: 13px 32px 0 0;
+	font-weight: bold;
+	line-height: 16px;
+}
+.store .store_left{
+	padding-right: 10px;
+	border-right: 1px solid #e1e1e1;
+	margin-right: 10px;
+}
+.store_left .store_ico{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../img/detail/ico-1.png) no-repeat 0 -9px;
+	overflow: hidden;
+	vertical-align: -2px;
+}
+.bendian{
+	width: 119px;
+	height: 24px;
+	margin: 9px 11px 0 0;
+}
+.ip{
+	width: 74px;
+	height: 22px;
+	border: 1px solid #cccccc;
+	border-right: none;
+	line-height: 22px;
+}
+.sou{
+	width: 44px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	background-color: #f0f0f0;
+	color: #666666;
+}
+.come{
+	width: 57px;
+	height: 22px;
+	border: 1px solid #dc0000;
+	margin-top: 9px;
+}
+.come a{
+	display: block;
+	width: 55xpx;
+	height: 20px;
+	border: 1px solid #ff7979;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	background-color: #ff5555;
+}
+.co_left{
+	width: 400px;
+	height: 687px;
+}
+.left_pic{
+	width: 398px;
+	height: 398px;
+	border: 1px solid #dddddd;
+}
+.pic_nav{
+	text-align: center;
+	margin-top: 25px;
+	word-spacing: 5px;
+}
+.pic_nav a{
+	display: inline-block;
+	width: 56px;
+	height: 56px;
+	border: 2px solid #fff;
+	/*vertical-align: top;*/
+}
+.pic_nav a:hover{
+	border: 2px solid #999;
+}
+.bianhao{
+	display: inline-block;
+	line-height: 14px;
+	padding-right: 6px;
+	margin-top: 14px;
+	border-right: 1px solid #cccccc;
+	color: #999;
+}
+.co_center{
+	width: 620px;
+	height: 687px;
+	padding: 0 25px;
+}
+.sou_name{
+	font: bold 16px/24px arial;
+	padding-right: 34px;
+	height: 48px;
+}
+.fu_name{
+	height: 37px;
+	line-height: 36px;
+	color: #999;
+}
+.center_info{
+	width: 570px;
+	/*height: 198px;*/
+	background-color: #fde5e0;
+}
+.info_one{
+	height: 101px;
+	border-top: 1px solid #ffcbc4;
+}
+.one_l{
+	width: 70px;
+	color: #666;
+	line-height: 54px;
+	text-indent: 10px;
+}
+.one_r{
+	padding-top: 11px;
+}
+.r_jiage{
+	color: #e60012;
+	
+}
+.r_jiage .r_fuhao{
+	font-size: 16px;
+}
+.r_jiage .r_number{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 30px;
+}
+.r_ad1, .r_ad2{
+	color: #e8a29a;
+	line-height: 22px;
+}
+.info_link{
+	color: #0066cc;
+	font-family: arial;
+}
+.r_ad2{
+	line-height: 36px;
+}
+.info_two{
+	height: 28px;
+	padding-left: 60px;
+	border-top: 1px solid #ffcbc4;
+	line-height: 26px;
+	color: #884d9f;
+}
+.info_two .rule_1hao{
+	font-weight: bold;
+}
+.info_two .rule_ico{
+	float: left;
+	width: 15px;
+	height: 14px;
+	background: url(../img/detail/ico-1.png) no-repeat 0 -23px;
+	overflow: hidden;
+	margin: 6px 6px 0 0;
+}
+.info_3{
+	height: 30px;
+	padding:5px 0 0 70px;
+	border-top: 1px solid #d7c3bf;
+	line-height: 30px;
+}
+.info_3 .suport{
+	color: #666;
+}
+.info_3 .free{
+	color: #0066cc;
+}
+.info_4{
+	height: 26px;
+	padding: 4px 0 0 70px;
+	line-height: 26px;
+	border-top: 1px solid #ffcbc4;
+	background-color: #fff4f2;
+}
+.info_4 .re_ico{
+	float: left;
+	width: 16px;
+	height: 15px;
+	background: url(../img/detail/ico-1.png) no-repeat 0 -37px;
+	overflow: hidden;
+	margin: 6px 2px 0 0;
+}
+.info_4 .re_text{
+	color: #aaaaaa;
+}
+.info_4 .re_num{
+	color: #ff875a;
+}
+.info_5{
+	height: 102px;
+	padding: 8px 0 0 12px;
+	background-color: #fff;
+	border-top: 1px dotted #d9d9d9;
+}
+.five_l{
+	width: 58px;
+	line-height: 41px;
+}
+.five_r .ico_1{
+	display: block;
+	width: 42px;
+	height: 24px;
+	border: 1px solid #e50122;
+	text-align: center;
+	line-height: 24px;
+	position: relative;
+	margin: 7px 0 10px 0;
+}
+.five_r .five_ico{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: url(../img/detail/ico-1.png) no-repeat 0 -52px;
+	overflow: hidden;
+	right: 0;
+	bottom: 0;
+}
+.five_r .ico_2{
+	float: left;
+	width: 88px;
+	height: 34px;
+	border: 1px solid #dddddd;
+	text-align: center;
+	line-height: 34px;
+	position: relative;
+	margin-right: 5px;
+}
+.ico_2 .five_ico{
+	display: none;
+}
+.ico_2:hover .five_ico{
+	display: block;
+}
+.ico_2:hover{
+	border: 1px solid #e50122;
+}
+.info_6{
+	background-color: #FFF;
+	line-height: 31px;
+}
+.info_7{
+	padding: 37px 0 0 70px;	
+	background-color: #fff;
+}
+.info_7 .number{
+	width: 68px;
+	height: 46px;
+	font: bold 14px/46px arial;
+	text-indent: 18px;
+	border: 1px solid #c8c7cc;
+	position: relative;
+}
+.number .num_ico{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 23px;
+	height: 23px;
+	background: url(../img/detail/ico-1.png) no-repeat 0 -62px;
+	overflow: hidden;
+}
+.number .num_ico2{
+	position: absolute;
+	right: 0;
+	top: 23px;
+	background-position: 0 -85px;
+}
+.comebuy{
+	width: 135px;
+	height: 46px;
+	border: 1px solid #ff5252;
+	background-color: #ff5c4d;
+	text-align: center;
+	font: 16px/46px arial;
+	color: #fff;
+	margin:0 1px 0 8px;
+}
+.comebuy .comebuy_ico{
+	display: inline-block;
+	width: 20px;
+	height: 17px;
+	background: url(../img/detail/ico-1.png) no-repeat -23px 0;
+	overflow: hidden;
+}
+.over{
+	width: 120px;
+	height: 47px;
+	border: 1px dashed #d7d7d7;
+	text-align: center;
+}
+.over .text1{
+	color: #999999;
+	line-height: 24px;
+}
+.over .text2{
+	color: #ff875a;
+	line-height: 26px;
+	font-size: 16px;
+}
+.xiangou{
+	padding: 7px 0 30px 0;
+	width: 176px;
+	height: 27px;
+	line-height: 26px;
+	text-align: center;
+	background: url(../img/detail/xiangou.jpg) no-repeat;
+	margin-top: 5px;
+}
+.xiangou span{
+	color: #ff603c;
+}
+.info_8{
+	line-height: 40px;
+	color: #666666;
+	background-color: #fff;
+	border-top: 1px dotted #d9d9d9;
+}
+.info8_ico{
+	display: inline-block;
+	width: 15px;
+	height: 14px;
+	background: url(../img/detail/ico-1.png) no-repeat -23px -17px;
+	vertical-align: -2px;
+	overflow: hidden;
+}
+.info_8 .promise{
+	width: 70px;
+	text-indent: 10px;
+}
+.info_8 .promise2{
+	margin-right: 20px;
+}
