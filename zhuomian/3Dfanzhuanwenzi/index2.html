@@ -1,0 +1,160 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<meta name="viewport" content="width=600">
+
+<style>
+	body{
+		margin:0;
+		height:100%;
+	  	display:flex;
+	    align-items:center;
+	  	-webkit-justify-content:center;
+	     -ms-flex-pack:center;
+	    justify-content:center;
+	  	background-color:#684da3;
+	}
+	p{
+		color:#fff;
+		font-size:1em;
+		font-weight:bold;
+		font-family:"微软雅黑";
+	}
+	
+	p span {
+	  display:inline-block;
+	  position:relative;
+	  -webkit-transform-style:preserve-3d;
+	          transform-style:preserve-3d;
+	  -webkit-perspective:500px;
+	          perspective:500px;
+	}
+	/** transition 属性是一个简写属性，用于设置四个过渡属性：
+				语法
+				transition: property duration timing-function delay;
+			
+			注：只写一个时间的时候，表示持续时间
+			all：表示针对所有元素。
+			none：表示没有元素。
+			ident：指定CSS属性列表
+			transition-timing-function 的五种取值：
+				1.ease 逐渐变慢
+				2.linear 匀速
+				3.ease-in 缓慢开始（加速）
+				4.ease-out 缓慢结束（减速）
+				5.ease-in-out 缓慢开始，缓慢结束（先加速后减速）
+				6.cubic-bezier 贝塞尔曲线（matthewlein.com/ceaser）
+				
+		::after：
+				:after是css中的一种伪元素，可用于在某个元素之后插入某些内容。
+		::before
+				:before是css中的一种伪元素，可用于在某个元素之前插入某些内容。
+				这两者的区别可以简单描述为：
+				想让插入的内容出现在其它内容前，使用::before，否者，使用::after。
+			1.定义：
+				伪类可以独立于文档的元素来分配样式，且可以分配给任何元素，逻辑上和功能上类类似
+				但是其是预定义的、不存在于文档树中且表达方式也不同，所以叫伪类。
+					伪类有：:first-child ，:link:，vistited，:hover:，active:focus，:lang 
+				伪元素所控制的内容和一个元素控制的内容一样，但是伪元素不存在于文档树中，不是真正的元素，所以叫伪元素。
+                                                   伪元素有：:first-line，:first-letter，:before，:after，::selection
+			1.基本语法:
+			 	需要将这两个伪元素用于添加一些自定义字符时，只需使用伪类使用的单冒号写法或双冒号写法（IE8只支持单冒号的格式）
+			2.content用法：
+				伪元素的特有属性content，可以包含文字，图片，调用属性，调用计数器等
+				用于在 CSS渲染中向元素逻辑上的头部或尾部添加内容。
+			           结构和样式分离，就意味着：没有样式表，HTML文档也是一个完整的文档；
+			                    没有样式表，也能正常阅读用HTML表达的所有内容。明白这种思想就能很好理解样式表中使用------
+			    	:before 和 :after中的content: "";
+			     	------就算没有------:before 和 :after中的content: "";
+			     	------HTML文档也不会受到影响，HTML文档也是一个完整的文档，所以，
+			     	用简单的话来说： :before 和 :after中的content: "";不过是对HTML的装潢，使HTML看起来更漂亮一些。
+				
+				attr() – 调用当前元素的属性，可以方便的比如将图片的 Alt 提示文字或者链接的 Href 地址显示出来。
+				content : attr(attrName);
+				可以在节点之前插入属性data-name的值 value
+		*/
+	p span::before,
+	p span::after {
+		display:none;
+		position:absolute;
+		top:0;
+		left:-1px;
+		-webkit-transform-origin:left;
+		-ms-transform-origin:left top;
+		transform-origin:left top;
+		-webkit-transition:0.3s;
+		transition:0.3s;
+		content:attr(data-text);
+	}
+	/*文字阴影*/
+	/*scale	(x,y)缩放倍数
+	 * skew	(x,y)倾斜角度	*/
+	p span::before {
+	  z-index:1;
+	  color:rgba(0,0,0,0.2);
+	  -webkit-transform:scale(1.1, 1) skew(0deg, 20deg);
+	      -ms-transform:scale(1.1, 1) skew(0deg, 20deg);
+	          transform:scale(1.1, 1) skew(0deg, 20deg);
+	}
+	/*翻页文字*/
+	p span::after {
+	  z-index:2;
+	  color:#684da3;
+	  /*text-shadow:属性向文本添加一个或多个阴影*/
+	  text-shadow:-1px 0 1px #684da3, 1px 0 1px rgba(0,0,0,0.8);
+	  /*transform:rotateY：沿着 y轴的 3D 旋转*/
+	  -webkit-transform:rotateY(-40deg);
+	          transform:rotateY(-40deg);
+	}
+	
+	p span:hover::before {
+	  -webkit-transform:scale(1.1, 1) skew(0deg, 5deg);
+	      -ms-transform:scale(1.1, 1) skew(0deg, 5deg);
+	          transform:scale(1.1, 1) skew(0deg, 5deg);
+	}
+	p span:hover::after {
+	  -webkit-transform:rotateY(-10deg);
+	          transform:rotateY(-10deg);
+	}
+	@media (min-width:20em) {
+	  p {
+	    font-size:2em;
+	  }
+	  p span::before,
+	  p span::after {
+	    display:block;
+	  }
+	}
+	@media (min-width:30em) {
+	  p {
+	    font-size:3em;
+	  }
+	}
+	@media (min-width:40em) {
+	  p {
+	    font-size:5em;
+	  }
+	}
+	@media (min-width:60em) {
+	  p {
+	    font-size:8em;
+	  }
+	}
+	
+</style>
+</head>
+<body>
+<p>
+	<span data-text="3">3</span>
+	<span data-text="D">D</span>
+	<span data-text="折">折</span>
+	<span data-text="叠">叠</span>
+	<span data-text="文">文</span>
+	<span data-text="字">字</span>
+</p>
+
+</body>
+</html>

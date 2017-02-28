@@ -1,0 +1,275 @@
+p,h3{
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+.full-pop{
+	width: 980px;
+	height:520px;
+	border-radius: 8px;
+	font-family: 'Microsoft Yahei';
+	background-color: white;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+.full-show{
+	width: 1366px;
+	height:600px;
+	border-radius: 8px;
+	font-family: 'Microsoft Yahei';
+	background-color: white;
+	/*position: absolute;
+	left: 0;
+	top:0;*/
+}
+.full-pop .title-title{
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	background-color:#333;
+	border-radius: 8px 8px 0px 0px;
+	color:#fff;
+	
+}
+.title{
+	margin-left:8px;
+}
+.title-right{
+	float:right;
+	margin-right:10px;
+}
+.full-pop h3{
+	display: inline;
+}
+.full-pop .narrow{
+	background:url(../img/bg_css3.png) no-repeat 0 -192px;
+	float:left;
+	width:20px;
+	height:20px;
+	margin-top:4px;
+	margin-right:2px;
+}
+.full-pop .narrow:hover{
+	background:url(../img/bg_css3.png) no-repeat 0 -212px;
+	cursor: pointer;
+}
+.full-pop .enlarge{
+	background:url(../img/bg_css3.png) no-repeat 0 -152px;
+	float:left;
+	width:20px;
+	height:20px;
+	margin-top:4px;
+	margin-right:2px;
+}
+.full-pop .enlarge.enlarge-v{
+	background:url(../img/bg_css3.png) no-repeat 0 -112px;
+	float:left;
+	width:20px;
+	height:20px;
+	margin-top:4px;
+	margin-right:2px;
+}
+.full-pop .enlarge:hover{
+	background:url(../img/bg_css3.png) no-repeat 0 -172px;
+	cursor: pointer;
+}
+.full-pop .enlarge.enlarge-v:hover{
+	background-position:0 -132px;
+	cursor: pointer;
+}
+.full-pop .close{
+	background:url(../img/bg_css3.png) no-repeat 0 -72px;
+	float:left;
+	width:20px;
+	height:20px;
+	margin-top:4px;
+}
+.full-pop .close:hover{
+	background:url(../img/bg_css3.png) no-repeat 0 -92px;
+	cursor: pointer;
+}
+
+.full-pop .dialog{
+	width: 410px;
+	padding: 20px;
+}
+.full-pop .dir-file{
+	line-height: 34px;
+	margin-bottom: 12px;
+	height: 34px;
+}
+.full-pop .dir-file span{
+	float: left;
+	margin-left: 10px;
+}
+.full-pop .file-img{
+	background: url(../imgs/file-small.png) no-repeat 0px 2px;
+	height: 34px;
+	width: 34px;
+}
+iframe{
+	width:980px;
+	height:490px;
+	border:none;
+}
+.motif{
+	width:860px;
+	height:450px;
+	display:none;
+	margin-top:40px;
+	margin-left:20px;
+	border-top:2px solid #a1b4b0;
+}
+.content .monopolize-1{
+	position:absolute;
+	left:10px;
+	top:4px;
+	width:64px;
+	height:64px;
+	background:url(../icon/sosomap.png) no-repeat;
+	background-size:64px 64px;
+}
+.content .monopolize-font-1{
+	width:68px;
+	height:20px;
+	line-height:20px;
+	position:absolute;
+	left:9px;
+	top:65px;
+	font-size:12px;
+	color:#0b70ac;
+	text-align:center;
+}
+#practical{
+	width:84px;
+	height:85px;
+	border:1px solid transparent;
+	position:relative;
+	overflow: hidden;
+	float:left;
+	margin-right:20px;
+}
+#practical:hover{
+	border:1px solid #828588;
+	border-radius:4px;
+	overflow: hidden; 
+	background-color:#a4a8ac; 
+}
+#practical-1{
+	width:84px;
+	height:85px;
+	border:1px solid transparent;
+	position:relative;
+	overflow: hidden;
+	float:left;
+	margin-right:20px;
+}
+#practical-1:hover{
+	border:1px solid #828588;
+	border-radius:4px;
+	overflow: hidden; 
+	background-color:#a4a8ac; 
+}
+#practical-1 .monopolize-2{
+	position:absolute;
+	left:10px;
+	top:4px;
+	width:64px;
+	height:64px;
+	background:url(../icon/time.png) no-repeat;
+	background-size:64px 64px;
+}
+#practical-2{
+	width:84px;
+	height:85px;
+	border:1px solid transparent;
+	position:relative;
+	overflow: hidden;
+	float:left;
+}
+#practical-2:hover{
+	border:1px solid #828588;
+	border-radius:4px;
+	overflow: hidden; 
+	background-color:#a4a8ac; 
+}
+#practical-2 .monopolize-3{
+	position:absolute;
+	left:10px;
+	top:4px;
+	width:64px;
+	height:64px;
+	background:url(../icon/jinshan.png) no-repeat;
+	background-size:64px 64px;
+}
+.mask{
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity: .5;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:99;
+}
+
+.bg{
+	float:left;
+	width:160px;
+	height:140px;
+	margin:10px 10px 0;
+	border-radius:5px;
+}
+.bg-bg{
+	float:left;
+	width:150px;
+	height:110px;
+	border-radius:5px;
+	background:url("../img/beijing3.jpg") no-repeat;
+	background-size:150px 110px;
+	color:#45649E;
+	margin:0px auto;
+}
+.bg-bg2{
+	float:left;
+	width:150px;
+	height:110px;
+	border-radius:5px;
+	background:url("../img/beijing1-1.jpg") no-repeat;
+	background-size:150px 110px;
+	color:#45649E;
+	margin:0px auto;
+}
+.bg-bg3{
+	float:left;
+	width:150px;
+	height:110px;
+	border-radius:5px;
+	background:url("../img/beijing2.jpg") no-repeat;
+	color:#45649E;
+	background-size:150px 110px;
+	margin:0px auto;
+}
+.bg-bg4{
+	float:left;
+	width:150px;
+	height:110px;
+	border-radius:5px;
+	background:url("../img/beijing4.jpg") no-repeat;
+	background-size:150px 110px;
+	color:#45649E;
+	margin:0px auto;
+}
+.bg:hover{
+	background:#cbe7fc;
+}
+.bg .bg-font{
+	float:left;
+	width:160px;
+	height:18px;
+	margin:5px 0px 0px 0px;
+	text-align:center;
+	font-size:14px;
+}

@@ -1,0 +1,223 @@
+body{
+	font-size:12px;
+}
+.head{
+	width:100%;
+	height:580px;
+	background-color:#000000;
+}
+.title{
+	width:106px;
+	height:0px;
+	color:#406319;
+	background:url(../img/title-1.jpg) no-repeat;
+	overflow:hidden;
+	padding-top:55px;
+	position:absolute;
+	left:42px;
+	top:5px;
+}
+.head-content{
+	width:1263px;
+	height:410px;
+	margin:0 auto;
+}
+.head-top{
+	width:1263px;
+	height:59px;
+	border-bottom:1px solid #292929;
+	position:relative;
+	background-color:#222222;
+	margin:0 auto;
+}
+.title-2{
+	width:93px;
+	height:34px;
+	border:2px solid #d8a77a;
+	position:absolute;
+	left:177px;
+	top:12px;
+}
+.title-3{
+	width:471px;
+	height:38px;
+	position:absolute;
+	top:11px;
+	left:305px;
+}
+.title-left{
+	width:361px;
+	height:38px;
+	background-color:#e3e3e3;
+	position:absolute;
+	left:0px;
+	top:0px;
+	line-height:38px;
+}
+.title-3 input{
+	float:left;
+	width:360px;
+	height:34px;
+	border:1px solid #dadada;
+	border-right:none;
+	color:#999999;
+	text-indent:8px;
+	font-weight:bold;
+	background-color:##739d24;
+	line-height:38px;
+}
+.title-3 input:hover{
+	border:1px solid #77df62;
+	background-color:#ffffff;
+}
+.title-right{
+	width:109px;
+	height:36px;
+	border:1px solid #77df62;
+	border-left:none;
+	position:absolute;
+	left:361px;
+	top:0px;
+	background:#5aa503 url(../img/title-4.jpg) no-repeat 15px; 12px;
+}
+.title-right span{
+	color:#ffffff;
+	font-size:18px;
+	position:absolute;
+	left:40px;
+	top:9px;
+	font-weight:bold;
+}
+.title-4{
+	width:410px;
+	height:24px;
+	position:absolute;
+	left:813px;
+	top:19px;
+}
+.title-4 a{
+	color:#cccccc;
+}
+.nav1{
+	width:28px;
+	height:24px;
+	position:absolute;
+	left:0;
+	top:6px;
+}
+.title-4 .nav2{
+	width:28px;
+	height:24px;
+	position:absolute;
+	left:41px;
+	top:6px;
+}
+.title-4 .nav3{
+	width:51px;
+	height:24px;
+	position:absolute;
+	left:79px;
+	top:6px;
+}
+.nav4{
+	width:57px;
+	height:24px;
+	position:absolute;
+	left:140px;
+	top:6px;
+}
+.title-4 .ico{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.xia{
+	width:14px;
+	height:11px;
+	background: url(../img/xuebitu.png) no-repeat -74px -52px;
+	position:absolute;
+	left:0;
+	top:1;
+	overflow:hidden;
+}
+.nav4 .dian{
+	width:7px;
+	height:7px;
+	background: url(../img/xuebitu.png) no-repeat -72px -43px;
+	position:absolute;
+	left:43px;
+	top:-6px;
+	overflow:hidden;
+}
+.shangchuan{
+	width:29px;
+	height:24px;
+	position:absolute;
+	left:16px;
+	top:0;
+}
+.lsa{
+	width:10px;
+	height:5px;
+	background: url(../img/xuebitu.png) no-repeat -80px -43px;
+	position:absolute;
+	left:47px;
+	top:4px;
+	overflow:hidden;
+}
+.nav5{
+	width:82px;
+	height:24px;
+	position:absolute;
+	left:207px;
+	top:6px;
+}
+.jiaojiao{
+	width:10px;
+	height:5px;
+	position:absolute;
+	left:47px;
+	top:4px;
+}
+.nav5 .mm{
+	width:7px;
+	height:7px;
+	background: url(../img/xuebitu.png) no-repeat -72px -43px;
+	position:absolute;
+	left:61px;
+	top:-6px;
+	overflow:hidden;	
+}
+.nav6{
+	width:51px;
+	height:24px;
+	position:absolute;
+	left:288px;
+	top:6px;
+}
+.nav6 .sansan{
+	width:10px;
+	height:5px;
+	background: url(../img/xuebitu.png) no-repeat -80px -43px;
+	position:absolute;
+	left:31px;
+	top:4px;
+	overflow:hidden;
+}
+.nav7{
+	width:69px;
+	height:24px;
+	position:absolute;
+	left:340px;
+	top:6px;
+}
+.nav7 .san-2{
+	width:10px;
+	height:5px;
+	background: url(../img/xuebitu.png) no-repeat -80px -43px;
+	position:absolute; 
+	left:59px;
+	top:4px;
+	overflow:hidden;	
+	
+}
