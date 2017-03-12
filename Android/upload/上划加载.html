@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="load.css"/>
+<script type="text/javascript">
+(function(){
+	setRem();
+	window.addEventListener('orientation' in window?"deviceorientation":"resize",setRem);
+	function setRem(){
+		var html = document.documentElement;
+		var width = html.clientWidth;
+		html.style.fontSize = width/16 + "px";
+	}
+})();
+</script>
+<style type="text/css">
+body,
+html {
+	margin: 0;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}	
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+</style>
+</head>
+<body>
+	<header>妙味相册实例操作<a href="javascript:;" id="closeBtn">×</a></header>
+	<div id="box">
+		<div id="inner">
+			<ul id="list">
+			</ul>
+			<footer>加载更多</footer>
+		</div>
+	</div>
+	<section id="imgPage">
+		<header>大图预览<a href="javascript:;" id="backBtn"><</a></header>
+		<div class="imgWrap">
+			<img src="pics/1.jpg" id="bigImg" />
+			<nav id="imgNavs">
+				<a href="javascript:;">向左旋转90</a>
+				<a href="javascript:;">向右旋转90</a>
+				<a href="javascript:;">放大</a>
+				<a href="javascript:;">缩小</a>
+			</nav>
+		</div>
+	</section>
+	<script type="text/javascript" src="m.Tween.js"></script>
+	<script type="text/javascript" src="load.js"></script>
+</body>
+</html>

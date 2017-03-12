@@ -1,0 +1,492 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+body {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: scaleX();
+}
+img {
+  border: none;
+  vertical-align: top;
+}
+a{
+	text-decoration: none;
+}
+@-webkit-keyframes move {
+  0% {
+    background-position: -11.25rem 0;
+  }
+  100% {
+    background-position: 11.25rem 0;
+  }
+}
+@keyframes move {
+  0% {
+    background-position: -11.25rem 0;
+  }
+  100% {
+    background-position: 11.25rem 0;
+  }
+}
+@-webkit-keyframes rotateX {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  0% {
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+  }
+}
+@keyframes rotateX {
+  0% {
+    transform: rotateX(0deg);
+  }
+  0% {
+    transform: rotateX(360deg);
+  }
+}
+@-webkit-keyframes rotateY {
+  0% {
+    -webkit-transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#interface {
+  width: 20rem;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+#menu {
+  width: 1.75rem;
+  height: 1.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #000000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.lockScreen {
+  width: 3.125rem;
+  height: 3.125rem;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  line-height: 3.125rem;
+  font-size: 1.25rem;
+  color: #0D0A15;
+  background: rgba(255, 235, 255, 0.7);
+  border-radius: 50%;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  display: none;
+  transition: 0.5s;
+}
+/*遮罩层*/
+#shade {
+  width: 100%;
+  height: 100%;
+  background: url(../img/af.jpg) no-repeat;
+  background-size: 100% 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  /*display: none;*/
+}
+#shade1 {
+  width: 20rem;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  /*display: none;*/
+}
+/*============================================================*/
+/*滑动解锁*/
+#clear_box {
+  width: 11.25rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  margin-left: -5.625rem;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "微软雅黑";
+  line-height: 2.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 35%, #ffffff 50%, #ffffff 65%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 35%, #ffffff 50%, #ffffff 65%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-clip: -webkit-text;
+  background-position: -35rem 0;
+  animation: 2.5s move infinite linear;
+}
+/*==================================================================================*/
+#time_box {
+  width: 10rem;
+  height: 5.625rem;
+  position: relative;
+  top: 2.5rem;
+  left: 50%;
+  margin-left: -5rem;
+}
+#time {
+  width: 100%;
+  height: 3.125rem;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.time_ul {
+  width: 1.625rem;
+  height: 3.125rem;
+  text-align: center;
+  float: left;
+}
+.time_ul:nth-of-type(1) {
+  margin-left: 1.25rem;
+}
+.time_ul > li {
+  width: 100%;
+  height: 100%;
+  line-height: 3.125rem;
+  font-size: 2.5rem;
+  font-family: "Segoe UI Emoji";
+  color: #FFFFFF;
+  font-weight: 100;
+  transition: 1s;
+  backface-visibility: hidden;
+  animation: 1s rotateX infinite linear paused;
+}
+.time_ul:hover {
+  animation-play-state: running;
+}
+.time_ul:nth-of-type(3) > li {
+  margin-top: -0.25rem;
+}
+#time_text {
+  width: 100%;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-family: "微软雅黑";
+  color: #FFFFFF;
+  text-align: center;
+}
+#use_box {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  background: url(../img/rbg.jpg) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+}
+.use {
+  width: 3.125rem;
+  height: 3.75rem;
+  float: left;
+  margin-left: 1.5625rem;
+  margin-top: 1.25rem;
+}
+.use > img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.use > span {
+  display: inline-block;
+  width: 100%;
+  height: 0.625rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 0.625rem;
+  color: #fff;
+}
+#view {
+  width: 20rem;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  background: #fff;
+}
+#pageBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../bg/bg.jpg') no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+}
+.logoImg {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  margin-top: -15%;
+  width: 30%;
+}
+.logoImg img {
+  width: 100%;
+  display: block;
+  -webkit-animation: 2s rotateY linear infinite;
+  animation: 2s rotateY linear infinite;
+}
+.logoText {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+}
+#logo4,
+#logoIcos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#logoIcos {
+  -webkit-animation: 2s rotateY linear infinite;
+  animation: 2s rotateY linear infinite;
+}
+#logoIcos span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+  width: 30px;
+  height: 30px;
+  background: center center no-repeat;
+  background-size: contain;
+}
+#logo4Img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -35px 0 0 -98.5px;
+  width: 197px;
+  height: 70px;
+}
+#mian,
+#panoBg,
+#tZ,
+#cloud,
+#pano,
+.pano {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#panoBg span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: -585px 0 0 -64.5px;
+  width: 129px;
+  height: 1170px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#cloud span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -50px 0 0 -100px;
+  width: 200px;
+  height: 100px;
+}
+.pano span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 129px;
+  margin-left: -64.5px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#deleteX {
+  width: 3.5625rem;
+  height: 2.5rem;
+  text-align: center;
+  line-height: 1.25rem;
+  color: #fff;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  background: url(../img/close.png) no-repeat;
+}
+.qqBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.qqMrBox,
+.photoBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eeedf2;
+  text-align: center;
+  z-index: 100;
+}
+.photoBox{
+	overflow: hidden;
+}
+.closeqq,.closeviem{
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2rem;
+	font: bold 1.5rem "微软雅黑";
+	color: #000;
+	text-align: center;
+	z-index: 200;
+}
+.closeviem{
+	color: #fff;
+}
+.logon,
+.logon1 {
+  width: 20rem;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  float: left;
+}
+.logon1 {
+  background-color: #eeedf2;
+}
+.initilBg {
+  width: 11.25rem;
+  height: 23.75rem;
+  margin-top: 1.875rem;
+  margin-left: 20%;
+  background: url(../img/qqBg.png) no-repeat;
+  background-size: 100%  100%;
+}
+.logonOption {
+  width: 100%;
+  height: 2.5rem;
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+}
+.logonOption > span {
+  width: 8.75rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  display: inline-block;
+  border: 1px solid #d2d5d8;
+  border-radius: 0.3125rem;
+  font-weight: bold;
+}
+.tImgBox {
+  width: 100%;
+  height: 6.25rem;
+  text-align: center;
+  padding-bottom: 0.625rem;
+}
+.qqImg {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50% ;
+  border: 1px solid #fff;
+  background-size: 100% 100%;
+  margin-top: 6%;
+}
+.texts,
+.pass {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 0.625rem;
+  margin-bottom: 0.0625rem;
+  line-height: 2.75rem;
+}
+.enter {
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+  margin-top: 1.25rem;
+}
+.subm {
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+  background-color: #1ebbf0;
+  font-family: "微软雅黑";
+  font-size: 1.25rem;
+  text-align: center;
+  color: #fff;
+}
+.user {
+  width: 100%;
+  height: 1.875rem;
+  margin-top: 0.625rem;
+}
+.user > span {
+  display: inline-block;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  color: #67a3ff;
+  font-size: 0.75rem;
+}
+.lef {
+  float: left;
+  margin-left: 0.625rem;
+}
+.rig {
+  float: right;
+  margin-right: 0.625rem;
+}

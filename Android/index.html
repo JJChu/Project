@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<title>手机应用</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="upload/load.css"/>
+		<script type="text/javascript">
+			window.onload=function(){
+				var fz=document.documentElement.clientWidth/20;
+				document.getElementsByTagName("html")[0].style.fontSize=fz+"px";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="interface">
+			<div id="use_box">
+				<div class="use"></div>
+				<div class="use"></div>
+				<div class="use"></div>
+			</div>
+			<!--<div id="menu">
+				<span class="lockScreen">锁屏</span>
+			</div>-->
+			<div id="shade"></div>
+			<div id="shade1">	
+				<div id="time_box">
+					<div id="time" class="clearfix">
+						<ul class="time_ul"><li></li></ul>
+						<ul class="time_ul"><li></li></ul>
+						<ul class="time_ul"><li></li></ul>
+						<ul class="time_ul"><li></li></ul>
+						<ul class="time_ul"><li></li></ul>
+					</div>
+					<div id="time_text"></div>
+				</div>
+				<div id="clear_box">＞ 滑动来解锁</div>
+			</div>
+		</div>
+		<script src="m.Tween.js"></script>
+		<script src="jquery-3.1.1.js"></script>
+		<!--<script src="upload/load.js"></script>-->
+		<script src="js/data.js"></script>
+		<script src="js/data1.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+header {
+	height: 2.5rem;
+	background: #000;
+	line-height: 2.5rem;
+	color: #fff;
+	font-size: 1rem;
+	text-align: center;
+	position: relative;
+}
+#box,
+.imgWrap {
+	position: absolute;
+	top: 2.5rem;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+#list {
+	overflow: hidden;
+}
+#list li {
+	width: 8.75rem;
+	height: 8.75rem;
+	margin: 0.625rem;
+	float: left;
+	background: url(../pics/loadingImg.gif) center center no-repeat;
+}
+#list img {
+	display: block;
+	width: 100%;
+	opacity: 0;
+	transition: 2s;
+}
+#imgPage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #ccc;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+#bigImg {
+	position: absolute;
+	left: 3.75rem;
+	top: 50%;
+	margin-top: -6.25rem;
+	width: 12.5rem;
+	height: 12.5rem;
+
+}
+#imgNavs {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 2.5rem;
+	background: #fff;
+}
+#imgNavs a {
+	float: left;
+	width: 5rem;
+	font-size: .75rem;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+	line-height: 2.5rem;
+	border: 1px solid #666;
+	box-sizing: border-box;
+}
+#backBtn,#closeBtn {
+	position: absolute;
+	width: 2.5rem;
+	height: 2.5rem;
+	color: #fff;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+#backBtn{
+	left: 0;
+	top: 0;
+}
+#closeBtn{
+	right: 0;
+	top: 0;
+}
+#inner {
+	position: relative;
+}
+#inner footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2.5rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	font-size: 1rem;
+	opacity: 0;
+}
