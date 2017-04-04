@@ -1,0 +1,446 @@
+body{
+    margin: 0;
+}
+#header{
+    width: 100%;
+    height: 174px;
+}
+#begin{
+    width: 100%;
+    height:124px;
+}
+.remove{
+    background: #ffa801;
+}
+#begin h1{
+    margin:0;
+    width:50%;
+    height: 100%;
+    float: left;
+}
+#contact{
+    width: 50%;
+    height: 100%;
+    float:right;
+    position: relative;
+}
+#contact a{
+    float: right;
+    height:60px;
+    width:70px;
+    margin-left:30px;
+    margin-right: 35px;
+}
+#contact #wei{
+    width:100px;
+    height: 100px;
+    position: absolute;
+    left:340px;
+    top: 17px;
+    opacity: 0;
+}
+#contact #wei img{
+    width: 100%;
+    height: 100%;
+}
+#contact span{
+    float: right;
+    height:60px;
+    width:70px;
+    cursor: pointer;
+
+}
+#contact img{
+    height:60px;
+    width:70px;
+}
+#contactme{
+    width:95%;
+    height:64px;
+    margin-top: 60px;
+    margin-right: 5%;
+    background: url("img/contact.png") no-repeat 450px 7px;
+    font-family:Impact;
+    color: blue;
+    font-size: 23px;
+    text-align: right;
+}
+#header #nav{
+    width:100%;
+    height: 50px;
+    background:#3362a8;
+}
+#nav a:first-of-type{
+    margin-left: 50px;
+}
+#nav a{
+    display:inline-block;
+    width:150px;
+    height: 100%;
+    font-size:16px;
+    color:white;
+    line-height:50px;
+    text-decoration: none;
+    text-align: center;
+
+}
+#section3{
+    display:block;
+}
+section{
+    width: 100%;
+    display:none;
+}
+.guang{
+    width: 100%;
+    height: 500px;;
+}
+.guang img{
+    width: 100%;
+    height: 100%;
+}
+#cai{
+    width: 100%;
+    height:200px;
+    margin-top: 50px;
+}
+#cai div{
+    display: inline-block;
+    width:30%;
+    height: 100%;
+    margin-left:3%;
+}
+#cai div img{
+    margin-left:100px;
+}
+#cai div h2{
+    width: 100%;
+    height: 28px;
+    font-size: 20px;
+    text-align: center;
+}
+#gong{
+    width: 100%;
+    height:270px;
+}
+#gong h3{
+    width: 100%;
+    height:70px;
+    font-size:30px;
+    line-height:70px;
+    margin: 0;
+    text-indent: 1em;
+    border-bottom:1px solid #bebebe;
+}
+#gong div{
+    width: 100%;
+    height:200px;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height:180%;
+    text-indent: 2em;
+}
+#what{
+    width: 100%;
+    height:380px;
+    background:url("img/bg8.jpg") center center;
+    color:white;
+}
+#what h2{
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    padding-top:20px;
+    margin: 0;
+}
+#what ul{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height:220px;
+    margin-top:80px;
+}
+#what ul li{
+    list-style: none;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#what ul li div:first-child{
+    width:100px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid white;
+    border-radius:50%;
+}
+#what img{
+    margin:14px 0 0 11px;
+    transition: 1s;
+}
+#what span{
+    display: inline-block;
+    width: 100%;
+    height:30px;
+    font-size: 30px;
+    text-align: center;
+}
+#what p{
+    width: 100%;
+    height:34px;
+    font-size: 14px;
+    text-align: center;
+    line-height:25px;
+}
+#zan{
+    width: 100%;
+    height:320px;
+    margin-top:50px;
+}
+#zan h2{
+    width: 100%;
+    height:26px;
+    font-size: 24px;
+    line-height:26px;
+    margin: 0;
+    text-indent: 1em;
+    color: #3362a8;
+}
+#zan p{
+    width: 100%;
+    height:20px;
+    font-size: 18px;
+    line-height: 20px;
+    text-indent:1em;
+    color: #555555;
+}
+#hezuo{
+    width: 100%;
+    height: 210px;
+    margin: 0;
+    padding:0;
+}
+#hezuo li{
+    width:20%;
+    height:100px;
+    float: left;
+    list-style: none;
+}
+footer{
+    width: 100%;
+    height:160px;
+    background:#232323;
+}
+footer div{
+    width: 100%;
+    height:50px;
+    font-size: 22px;
+    line-height: 50px;
+    color:#555555;
+    margin-top:20px;
+    text-indent: 1em;
+}
+footer p{
+    width: 100%;
+    height:40px;
+    font-size:15px;
+    line-height:40px;
+    color:#555555;
+    margin-top:20px;
+}
+.section2{
+    background:#f1f1f1;
+}
+.section2 img{
+    width: 100%;
+    height:386px;
+    text-align: center;
+}
+#mei{
+    width: 100%;
+    height:580px;
+    margin-top:40px;
+}
+.xia{
+    width:20%;
+    height: 248px;
+    background: white;
+    margin-left:1%;
+    float: left;
+}
+.xia h2{
+    width:90%;
+    height:34px;
+    font-size: 24px;
+    line-height: 34px;
+    color:#3362a8;
+    margin: auto;
+    border-bottom:1px solid #bebebe;
+    padding-top: 20px;
+}
+.xia img{
+    width: 100%;
+    height:183px;
+    margin-top: 10px;
+}
+#jian-right{
+    width:69%;
+    height:531px;
+    margin: 0;
+    padding: 0;
+    margin-left:4%;
+    float: left;
+    padding-left: 10px;
+    background:white;
+}
+#jian-right li{
+    list-style: none;
+    height:73px;
+    line-height:160%;
+    font-size:16px;
+    margin-bottom: 10px;
+}
+#jian-right .yia{
+    height:50px;
+}
+#jian-right #vn{
+    height:55px;
+    font-size: 30px;
+    line-height:55px;
+    font-weight: bold;
+    border-bottom: 1px solid #bebebe;
+}
+#bug{
+    width: 100%;
+    height:686px;
+    margin-top:40px;
+}
+#zhao{
+    width: 100%;
+    height:386px;
+    text-align: center;
+}
+#ghf{
+    width:70%;
+    height: 686px;
+    float: left;
+    margin-left:5%;
+    background: ghostwhite;
+}
+#ghf ul{
+    width:95%;
+    height:459px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-left:5%;
+}
+#ghf ul li{
+    list-style: none;
+    width:50%;
+    height:153px;
+    float: left;
+}
+#ghf img{
+    width:133px;
+    height: 133px;
+    margin: 10px 0 0 10px;
+    float: left;
+}
+#ghf ul li div{
+    width:246px;
+    height: 83px;
+    float: left;
+    margin-left: 20px;
+}
+#ghf ul li div h3{
+    margin: 0;
+}
+#ghf ul li div p{
+    width:236px;
+    height:44px;
+    font-size:14px;
+    line-height:20px;
+}
+#you{
+    width: 100%;
+    height: 1237px;
+    margin-top:40px;
+}
+.shigong{
+    width:70%;
+    height: 1187px;
+    float: left;
+    margin-left: 5%;
+}
+.zxc{
+    width:90%;
+    height:34px;
+    font-size: 24px;
+    line-height: 34px;
+    margin: auto;
+    border-bottom:1px solid #bebebe;
+    padding-top: 20px;
+}
+.shigong ul{
+    width: 100%;
+    height:960px;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+}
+.shigong ul li{
+    width:48%;
+    height:300px;
+    float: left;
+    margin-left:1%;
+}
+.shigong ul li span{
+    display: block;
+    width:100%;
+    height:20px;
+    line-height:20px;
+    font-size: 20px;
+    text-align: center;
+    color: #3362a8;
+    margin-top: 15px;
+}
+.sm{
+    width: 100%;
+    height:190px;
+}
+.tree{
+    width: 100%;
+    height:100%;
+    opacity: 0;
+}
+.gl{
+    background: url("img/18.jpg") no-repeat center;
+}
+.ga{
+    background: url("img/19.jpg") no-repeat center;
+}
+.hj{
+    background: url("img/20.jpg") no-repeat center;
+}
+.gk{
+    background: url("img/21.jpg") no-repeat center;
+}
+.ol{
+    background: url("img/22.jpg") no-repeat center;
+}
+.fh{
+    background: url("img/23.jpg") no-repeat center;
+}
+.op{
+    background: url("img/24.jpg") no-repeat center;
+}
+.ah{
+    background: url("img/25.jpg") no-repeat center;
+}
+.shigong img{
+    width: 100%;
+    height:190px;
+    text-align: center;
+}
