@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script src="js/jq3.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<a href="javascript:;" class="onoff">
+				<span class="mouth"></span>
+				<span class="left-eye"></span>
+				<span class="right-eye"></span>
+			</a>
+		</div>
+		
+		<a href="#" class="toggle-menu replaced">
+			Menu
+			<span class="before"></span>
+			<span class="after"></span>
+		</a>
+		
+		<div class="toggle-menu-container">
+			<div class="toggle-menu-wrapper" style="perspective: 800px;">
+				<ul id="menuLeft" style="transform-origin: right 50% 0px; ">
+					<li class="active">
+						<a href="#">
+							<span class="headline">Home</span>
+							<span class="icon-wrapper teye-home">
+								<span class="teye-home-brown first" style="top: 11px;"></span>
+								<span class="teye-home-white second" style="top: 11px;"></span>
+							</span>
+						</a>
+					</li>
+					<li class="inactive">
+						<a href="#">
+							<span class="headline">Awake</span>
+							<span class="icon-wrapper teye-awake">
+								<span class="teye-awake-brown first" style="top: 11px;"></span>
+								<span class="teye-awake-white second" style="top: 11px;"></span>
+							</span>
+						</a>
+					</li>
+					<li class="inactive">
+						<a href="#">
+							<span class="headline">Angry</span>
+								<span class="icon-wrapper teye-angry">
+									<span class="teye-angry-brown first" style="top: 11px;"></span>
+									<span class="teye-angry-white second" style="top: 11px;"></span>
+								</span>
+						</a>
+					</li>
+					<li class="inactive"><a href="#">
+						<span class="headline">Know my skills</span>
+							<span class="icon-wrapper teye-battery">
+								<span class="teye-battery-brown first" style="top: 11px;"></span>
+								<span class="teye-battery-white second" style="top: 11px;"></span>
+							</span>
+					</a></li>
+					<li class="inactive"><a href="#">
+						<span class="headline">Two of me</span>
+							<span class="icon-wrapper teye-connected">
+								<span class="teye-connected-brown first" style="top: 11px;"></span>
+								<span class="teye-connected-white second" style="top: 11px;"></span>
+							</span>
+					</a></li>
+				</ul>
+				<ul id="menuRight" style="transform-origin: left 50% 0px;">
+					<li class="inactive"><a href="#">
+						<span class="headline">Sleepy</span>
+							<span class="icon-wrapper teye-sleepy">
+								<span class="teye-sleepy-brown first" style="top: 11px;"></span>
+								<span class="teye-sleepy-white second" style="top: 11px;"></span>
+							</span>
+					</a></li>
+					<li class="inactive"><a href="#">
+						<span class="headline">Active</span>
+							<span class="icon-wrapper teye-active">
+								<span class="teye-active-brown first" style="top: 11px;"></span>
+								<span class="teye-active-white second" style="top: 11px;"></span>
+							</span>
+					</a></li>
+					<li class="inactive"><a href="#">
+						<span class="headline">Sad</span>
+							<span class="icon-wrapper teye-sad">
+								<span class="teye-sad-brown first" style="top: 11px;"></span>
+								<span class="teye-sad-white second" style="top: 11px;"></span>
+							</span>
+					</a></li>
+					<li class="inactive"><a href="#">
+						<span class="headline">Look inside me</span>
+							<span class="icon-wrapper teye-explosion">
+								<span class="teye-explosion-brown first" style="top: 11px;"></span>
+								<span class="teye-explosion-white second" style="top: 11px;"></span>
+							</span>
+					</a></li>
+					<li class="inactive"><a href="#">
+						<span class="headline">Making of</span>
+							<span class="icon-wrapper teye-photos">
+								<span class="teye-photos-brown first" style="top: 11px;"></span>
+								<span class="teye-photos-white second" style="top: 11px;"></span>
+							</span>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<header>
+			<nav>
+				<div class="slides">
+					<span class="active"></span>
+					<ul>
+						<li><a href="#" class="replaced">Home</a></li>
+						<li><a href="#" class="replaced">Sleepy</a></li>
+						<li><a href="#" class="replaced">Awake</a></li>
+						<li><a href="#" class="replaced">Active</a></li>
+						<li><a href="#" class="replaced">Angry</a></li>
+						<li><a href="#" class="replaced">Sad</a></li>
+						<li><a href="#" class="replaced">Know my Skills - 360Grad - 4 Slides horizontal</a></li>
+						<li><a href="#" class="replaced">Explosion</a></li>
+						<li><a href="#" class="replaced">Connected</a></li>
+						<li><a href="#" class="replaced">Image Slideshow - Vegas</a></li>
+					</ul>
+					<div class="ico-mouse">
+						<span class="wheel" style="top: 3px;"></span>
+					</div>
+				</div>
+			</nav>
+		</header>
+		
+		
+		
+		<section class="one">
+			<div class="oneText">
+				<h1>Hi, my name is Teye!</h1>
+				<p>
+					I’m the first communication device that shows emotions.
+				</p>
+				<p>
+					Let me introduce myself and the way I communicate with you.
+				</p>
+			</div>
+			<div class="one-eye clearfix">
+				<div class="one-eye-left fl">
+					<img src="img/eye.png"/>
+				</div>
+				<div class="one-eye-right fl">
+					<img src="img/eye.png"/>
+				</div>
+			</div>
+			<svg class="one-eye" width="60%" height="80%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<!--<path d="M0 0 L500 0 L520 520 L20 520 Z" stroke="black" stroke-width="5" fill="none" />-->
+			</svg>
+		</section>
+		
+		
+		<section class="text">
+			<div>
+				<h2 class="h1">Sleepy</h2>
+				<p>This is what I look like when I fall asleep.</p>
+				<p>Zzzzzzzzzzz – only dreaming of you.</p>
+			</div>
+			<div>
+				<h2 class="h1">Awake</h2>
+				<p>If you come close to me, you wake me up.</p>
+				<p>Yaaaaaaawn – what have I missed?</p>
+			</div>
+			<div>
+				<h2 class="h1">Active</h2>
+				<p>If you call a buddy, you’ll see me in action. Aye aye –</p>
+				<p>I’m clocking in. How can I help you?</p>
+			</div>
+			<div>
+				<h2 class="h1">Angry</h2>
+				<p>Some things drive me crazy. Misunderstandings</p>
+				<p>or if nobody answers the call for example – #+?%&amp;?!</p>
+			</div>
+			<div>
+				<h2 class="h1">Sad</h2>
+				<p>Sometimes I don’t know the person you want to call or the connection is cut.</p>
+				<p>That’s getting me down – waaaaaaaaah!</p>
+			</div>
+		</section>
+		
+		
+		<section class="skills">
+			<div class="text">
+				<h2 class="h1">Know my Skills</h2>
+				<p>I'm a valued team member of denkwerk – not just a phone.</p>
+				<p>You don’t believe me? Look what I can do!</p>
+			</div>
+			<div class="ico">
+				<a href="#" class="icon-left top" style="pointer-events: auto;">
+					<span class="ico-battery icon"></span>
+					<span class="circle circle1">Autonomous work</span>
+				</a>
+				<a href="#" class="icon-left bottom" style="pointer-events: auto;">
+					<span class="ico-motion icon"></span>
+					<span class="circle circle2">Motion detection</span>
+				</a>
+				<a href="#" class="icon-right top" style="pointer-events: auto;">
+					<span class="ico-sound icon"></span>
+					<span class="circle circle3">Sound system</span>
+				</a>
+				<a href="#" class="icon-right bottom" style="pointer-events: auto;">
+					<span class="ico-voice icon"></span>
+					<span class="circle circle4">Voice recognition</span>
+				</a>
+			</div>
+			<span class="skill-img">		
+			</span>
+			<img class="teyeone" src="img/teye-wood.png"/>
+			<img class="teyetwo" src="img/teye-head.png"/>
+		</section>
+
+
+
+		<ul class="submenu">
+			<li>
+				<a href="#" class="ico-battery-small replaced" style="top: -20px;">
+					<span>Battery</span></a>
+			</li>
+			<li>
+				<a href="#" class="ico-motion-small replaced" style="top: -20px;">
+					<span>Motion</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="ico-sound-small replaced active" style="top: -20px;">
+					<span>Sound</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="ico-voice-small replaced" style="top: -20px;">
+					<span>Voice</span>	
+				</a>
+			</li>
+			<li>
+				<a href="#" class="ico-close-small replaced" style="top: -20px;">Close</a>
+			</li>
+		</ul>
+		
+		
+		<section class="battery">
+			<div class="content-wrapper">
+				<div class="icon-animation">
+					<div class="battery-body">
+						<div class="battery-fill"></div>
+					</div>
+					<p>
+						<span class="ico-heart"></span>
+						72 hours
+					</p>
+				</div>
+				<div class="text" style="opacity: 0;top: 200px;">
+					<h2 class="h1">Autonomous Work</h2>
+					<p>I can stand alone and take care of myself – with a longlife battery</p>
+					<p>and Wi-Fi. A cheer for independence!</p>
+				</div>
+			</div>
+			<div class="background-animation">
+				<div class="wifi">
+					<div class="wifi-big"></div>
+					<div class="wifi-middle"></div>
+					<div class="wifi-distance"></div>
+					<div class="wifi-small"></div>
+					<div class="wifi-dot"></div>
+				</div>
+				<img class="batteryImg" src="img/battery-background.jpg" style="opacity: 0;top: 500px;">
+			</div>
+		</section>
+			
+		<section class="motion">
+			<div class="content-wrapper">
+				<div class="icon-animation">
+					<div class="radar-body"></div>
+					<div class="radar-circles"></div>
+					<div class="ico-teye"></div>
+					<div class="dots">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="text" style="opacity: 0; top: 342px;">
+					<h2 class="h1">Motion Detection</h2>
+					<p>I see you – because my infrared motion sensors detect every movement</p>
+					<p>in front of me. Huh – what was that?</p>
+				</div>
+			</div>
+			<div class="background-animation">
+				<div class="ray">
+					<div class="ray-left"></div>
+					<div class="ray-left"></div>
+					<div class="ray-right"></div>
+					<div class="ray-distance"></div>
+					<div class="ray-end"></div>
+				</div>
+				<img class="motionImg" src="img/motion-background.jpg" style="opacity: 0;left: -1000px;">
+			</div>
+		</section>
+		
+
+		<section class="sound">
+			<div class="background-animation">
+				<div class="note-left" style="left: 30%; opacity: 0;">
+					<div class="note-big"></div>
+					<div class="note-middle"></div>
+					<div class="note-small"></div>
+					<div class="note"></div>
+				</div>
+				<div class="note-right" style="right: 30%; opacity: 0;">
+					<div class="note"></div>
+					<div class="note-small"></div>
+					<div class="note-middle"></div>
+					<div class="note-big"></div>
+				</div>
+				<img class="soundImg" src="img/sound-background.jpg" style="top:-400px;opacity: 0;">
+			</div>
+			<div class="content-wrapper">
+				<div class="icon-animation" style="left: 0px; opacity: 0;">
+					<div class="ico-sound-big">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="text" style="top: 200px; opacity: 0;">
+					<h2 class="h1">Sound system</h2>
+					<p>I am really a good speaker and listener – due to my amplified speakers</p>
+					<p>and sensitive microphone. Come on, have a try!</p>
+				</div>
+			</div>
+		</section>
+		
+		<section class="voice">
+			<div class="content-wrapper">
+				<div class="icon-animation">
+					<div class="sinus-wrapper"></div>
+				</div>
+				<div class="text" style="opacity: 0;top: -100px;">
+					<div class="ico-voice-big" style="opacity: 1;"></div>
+					<div class="ico-voice-circle"></div>
+					<div class="ico-voice-circle"></div>
+					<h2 class="h1">Voice Recognition</h2>
+					<p>I love your tender voice and take your orders. Ask for it</p>
+					<p>and I will do anything. Promise!</p>
+				</div>
+				<small>
+					<p>
+						Ahhh, what an awful dream. Ones and zeroes everywhere...
+					</p>
+					<p>
+						and I thought I saw a two.
+					</p>
+				</small>
+			</div>
+			<div class="background-animation">
+				<img class="voiceImg" src="img/voice-background.jpg" style="opacity: 1;top:-100% ;">
+			</div>
+		</section>
+		
+		
+		
+		<section class="explode">
+			<div class="text">
+				<h2 class="h1">Look inside me</h2>
+				<p>Take a look inside my inner workings and learn more about me.</p>
+				<p>Have fun, but hurry up! I'm feeling a little bit naked…</p>
+			</div>
+			<div class="explode-wrapper">
+				<div class="wrapper">
+					<ul id="scene" class="scene">
+						<li class="layer speaker" data-depth="0.5">
+							<img class="hover-img" src="img/speaker.png">
+							<img class="active-img" src="img/speaker-active.png">
+						</li>
+						<li class="layer motor-left" data-depth="0.1">
+							<img class="hover-img" src="img/motor-left.png">
+							<img class="active-img" src="img/motor-left-active.png">
+						</li>
+						<li class="layer raspberry" data-depth="0.08">
+							<img class="hover-img" src="img/raspberry.png">
+							<img class="active-img" src="img/raspberry-active.png">
+						</li>
+						<li class="layer motor-right" data-depth="0.1">
+							<img class="hover-img" src="img/motor-right.png">
+							<img class="active-img" src="img/motor-right-active.png">
+						</li>
+						<li class="layer usb" data-depth="0.5">
+							<img class="hover-img" src="img/usb.png">
+							<img class="active-img" src="img/usb-active.png">
+						</li>
+						<li class="layer chip" data-depth="0.45">
+							<img class="hover-img" src="img/chip.png">
+							<img class="active-img" src="img/chip-active.png">
+						</li>
+						<li class="layer micro" data-depth="0.4">
+							<img class="hover-img" src="img/micro.png">
+							<img class="active-img" src="img/micro-active.png">
+						</li>
+						<li class="layer motion-detector" data-depth="0.3">
+							<img class="hover-img" src="img/motion-detector.png">
+							<img class="active-img" src="img/motion-detector-active.png">
+						</li>
+						<li class="layer sound-card" data-depth="0.4">
+							<img class="hover-img" src="img/sound-card.png">
+							<img class="active-img" src="img/sound-card-active.png">
+						</li>
+						<li class="layer battery-module" data-depth="0.7">
+							<img class="hover-img" src="img/battery.png">
+							<img class="active-img" src="img/battery-active.png">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	
+	
+	
+		<div class="modal-wrap">
+			<div class="modal-bg"></div>
+			<div class="modal-arrow-left">
+				<img src="img/owl-arrow-left.png">
+			</div>
+			<div class="modal-arrow-right">
+				<img src="img/owl-arrow-right.png">
+			</div>
+			<div class="modal-container">
+				<div class="modal-content">
+					<a href="#" class="ico-close-small replaced">Close</a>
+					<div class="raspberry-content">
+						<div class="image-wrapper raspberry-modal"></div>
+						<h1>RASPBERRY PI</h1>
+						<p>
+							This is me: the Raspberry Pi B. Overclocked to 950Mhz<br>and equipped
+							with 512 MB SDRAM it’s my brain in a way.<br>When I do a lot of thinking
+							it’s getting freaking hot<br>in here. Most of the time I feel cold however.
+							Brrrrrrrr!
+						</p>
+					</div>
+					<div class="chip-content" style="display: none;">
+						<div class="image-wrapper chip-modal" style="opacity: 1;"></div>
+						<h1>ANALOG-DIGITAL CONVERTER</h1>
+						<p>
+							Huh? That sounds weird to my mind… It’s a good thing that the guys of
+							denkwerk implemented this little component: the MCP3008 Analog to Digital Converter.
+							<br>It samples signals 200.000 times per second and translates all that analog gibberish
+							into comprehensible instructions for me. A-A-A-A-A-Aight!
+						</p>
+					</div>
+					<div class="usb-content" style="display: none;">
+						<div class="image-wrapper usb-modal" style="opacity: 1;"></div>
+						<h1>WI-FI MODULE</h1>
+						<p>					
+							The wire? Heard about, but never seen. With this Wi-Fi adapter I encrypt
+							WPA2 and WEP and go on the internet without any wires. I feel as free
+							as a bird – Hoooooooooray!
+						</p>
+					</div>
+					<div class="sound-card-content" style="display: none;">
+						<div class="image-wrapper sound-card-modal" style="opacity: 1;"></div>
+						<h1>SOUNDCARD</h1>
+						<p>
+							This is my SpeedLink Soundcard with a sampling rate<br>of 48K –
+							responsible not only to my sharp sense<br>of hearing, but my feeling
+							for language as well.<br>Dude, it’s fair to say I’m an allrounder. Isn’t it?
+						</p>
+					</div>
+					<div class="motor-content" style="display: none;">
+						<div class="image-wrapper motor-modal" style="opacity: 1;"></div>
+						<h1>SERVO MOTOR</h1>
+						<p>
+							This tiny unit is my PowerPro MG90S Servo Motor with 1.8kg/cm to 2.2kg/cm power.
+							Knowing him was a real eye-opener to me. That’s why I got even two of them.
+							<br>Just look into my eyes and convince yourself. Wink, wink!
+						</p>
+					</div>
+					<div class="speaker-content" style="display: none;">
+						<div class="image-wrapper speaker-modal" style="opacity: 1;"></div>
+						<h1>LOUDSPEAKERS</h1>
+						<p>
+							You better watch your mouth. Because my Visaton K 45 –<br>8 Ohm repeats every
+							singlesound you deliver – with 2W<br>in a transmission range (-10 dB)
+							between 300 – 14000 Hz.<br>So don’t blame me for your funny pronunciation.<br>You started it!
+						</p>
+					</div>
+					<div class="battery-module-content" style="display: none;">
+						<div class="image-wrapper battery-module-modal" style="opacity: 1;"></div>
+						<h1>BATTERY</h1>
+						<p>
+							Pooh! Such a working day can be so energy-sapping.<br>I’m glad that I have this Anker
+							external battery with<br>a capacity of 10000mAh 3.7v 37Wh. This is the place where I take
+							my power from when I’m zonked.<br>The show mustgo on, right?
+						</p>
+					</div>
+					<div class="micro-content" style="display: none;">
+						<div class="image-wrapper micro-modal" style="opacity: 1;"></div>
+						<h1>MICROPHONE</h1>
+						<p>
+							Haha – good one. With my CZ034 Electret Microphone<br>I can record all noises in
+							the range between -32dB ± 3dB.<br>It doesn’t matter whether it‘s a funny joke or
+							the latest rumours. I lend an ear to you. Microphone check!<br>One, two.
+						</p>
+					</div>
+					<div class="motion-detector-content" style="display: none;">
+						<div class="image-wrapper motion-detector-modal" style="opacity: 1;"></div>
+						<h1>INFRARED MOTION SENSOR</h1>
+						<p>
+							My sensitive Sharp Infrared Sensor makes me very watchful at a distance
+							from 20 to 150cm. Side-effect:<br>at this point I’m particulary ticklish.
+							Stop it, please!<br>Don’t touch me. Hahahahahaha!
+						</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		<section class="connected">
+			<div class="text">
+				<h2 class="h1">There are two of me</h2>
+				<p>denkwerk has two offices. That’s why there are two of me. If Berlin is calling,</p>
+				<p>Cologne is on the other end of the phone. And vice versa. Chat soon. Bye!</p>
+			</div>
+			<ul class="city-connected">
+				<li><a href="#" class="berlin-flag">Berlin <span></span></a></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><span class="dot"></span></li>
+				<li><a href="#" class="cologne-flag">Cologne <span></span></a></li>
+			</ul>
+			
+			<div class="teye-wrapper-connected">
+				<div class="teye-wrapper-blue">
+					<div class="image-wrapper">
+						<div class="teye-foot">
+							<img src="img/teye-wood.png">
+						</div>
+						<div class="teye-head">
+							<img src="img/teye-head.png">
+						</div>
+						<div class="wrapper-eye left">
+							<img src="img/eye.png" class="eye">
+						</div>
+						<div class="wrapper-eye right">
+							<img src="img/eye.png" class="eye">
+						</div>
+					</div>
+				</div>
+				<div class="teye-wrapper-pink">
+					<div class="image-wrapper">
+						<div class="teye-foot">
+							<img src="img/teye-wood.png">
+						</div>
+						<div class="teye-head">
+							<img src="img/teye-head-rosa.png">
+						</div>
+						<div class="wrapper-eye left">
+							<img src="img/eye.png" class="eye">
+						</div>
+						<div class="wrapper-eye right">
+							<img src="img/eye.png" class="eye">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<section class="slideshow">
+			<div class="slideImg">
+				<div>
+					<img class="imgOne" src="img/13_h.jpg"/>
+				</div>
+				<div>
+					<img class="imgTwo" src="img/1_h.jpg"/>
+				</div>
+				<div>
+					<img class="imgThree" src="img/2_h.jpg"/>
+				</div>
+			</div>
+			<div class="owl-nav">
+				<div class="owl-prev">
+					<img src="img/owl-arrow-left.png"/>
+				</div>
+				<div class="owl-next">
+					<img src="img/owl-arrow-right.png"/>
+				</div>
+			</div>
+			<div class="owl-dots">
+				<div class="active"></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</section>
+		
+		<script src="js/index.js"></script>
+	</body>
+</html>
