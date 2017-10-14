@@ -286,8 +286,8 @@ ul{
 	float:left;
 	width:89%;
 	height:560px;
-	margin-left:30px;
-	position:relative;
+	position:absolute;
+	left:100px;
 	overflow:hidden;
 }
 .content .content-class{
